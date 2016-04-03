@@ -15,10 +15,23 @@ struct HackerNewsModel {
 //    var storyURL: NSURL
     
     init(hackerData: HackerData) {
-        createdTimeStamp = hackerData["created_at_i"] as! NSInteger
-        author = hackerData["author"] as! String
-        storyID = hackerData["story_id"] as! NSInteger
-        storyTitle = hackerData["story_title"] as! String
-//        storyURL = (hackerData["story_url"] as? NSURL)!
+
+        if let createdTimeStamp = hackerData["created_at_i"] as? NSInteger,
+            let author = hackerData["author"] as? String,
+            let storyID = hackerData["story_id"] as? NSInteger,
+            let storyTitle = hackerData["story_title"] as? String
+        {
+            self.createdTimeStamp = createdTimeStamp
+            self.author = author
+            self.storyID = storyID
+            self.storyTitle = storyTitle
+
+        }
+        else {
+            self.createdTimeStamp = 1234
+            self.author = "Ben"
+            self.storyID = 1234
+            self.storyTitle = "ben"
+        }
     }
 }

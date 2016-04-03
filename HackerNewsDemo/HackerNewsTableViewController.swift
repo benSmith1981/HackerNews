@@ -10,6 +10,7 @@ import UIKit
 
 class HackerNewsTableViewController: UITableViewController {
 
+    var newHackerDataArray:[HackerNewsModel] = []
     var newHackerData: HackerNewsModel? //struct to hold data we get back
     @IBOutlet var hackerTable: UITableView?
     
@@ -17,7 +18,8 @@ class HackerNewsTableViewController: UITableViewController {
         super.viewDidLoad()
         HackerNewsData.sharedInstance.loadFeed { (success) in
             if(success){
-                self.newHackerData = HackerNewsData.sharedInstance.newHackerData
+//                self.newHackerData = HackerNewsData.sharedInstance.newHackerDataArray
+                self.newHackerDataArray = HackerNewsData.sharedInstance.newHackerDataArray
                 self.hackerTable!.reloadData()
             }
         }
@@ -34,14 +36,14 @@ class HackerNewsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("HackerNewsCell", forIndexPath: indexPath) 
         let row = indexPath.row
-        if let title = self.newHackerData?.storyTitle {
-            cell.textLabel?.text = title
-        }
+        self.newHackerData = self.newHackerDataArray[row]
+        cell.textLabel?.text = self.newHackerData!.storyTitle
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return self.newHackerDataArray.count;
     }
 }
 

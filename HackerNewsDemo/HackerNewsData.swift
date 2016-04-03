@@ -19,7 +19,7 @@ class HackerNewsData {
     
     static let sharedInstance = HackerNewsData()
     var newHackerData: HackerNewsModel? //struct to hold data we get back
-    var newHackerDataArray = []
+    var newHackerDataArray:[HackerNewsModel] = []
     private var hackerInfoDict:HackerData = [:] //dictionary to hold data from json
 
     private init() {}
@@ -28,10 +28,10 @@ class HackerNewsData {
         makeLoadrequest(hackerNewsPath, onCompletion: { json, err in
             if let json = json {
                 //store the json in an object
-//                for anItem in json as HackerData {
                 for jsonObject in (json["hits"] as? NSArray)!{
                     print(jsonObject)
                     self.newHackerData = HackerNewsModel.init(hackerData: jsonObject as! HackerData)
+                    self.newHackerDataArray.append(self.newHackerData!)
                 }
                 onCompletion(true)
             } else {
