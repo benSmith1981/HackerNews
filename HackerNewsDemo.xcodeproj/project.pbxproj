@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */; };
-		BEBF12371CB1AB4B00EA9479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12361CB1AB4B00EA9479 /* ViewController.swift */; };
 		BEBF123A1CB1AB4B00EA9479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBF12381CB1AB4B00EA9479 /* Main.storyboard */; };
 		BEBF123C1CB1AB4B00EA9479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */; };
 		BEBF123F1CB1AB4B00EA9479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBF123D1CB1AB4B00EA9479 /* LaunchScreen.storyboard */; };
 		BEBF124A1CB1AB4B00EA9479 /* HackerNewsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12491CB1AB4B00EA9479 /* HackerNewsDemoTests.swift */; };
 		BEBF12551CB1AB4B00EA9479 /* HackerNewsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12541CB1AB4B00EA9479 /* HackerNewsDemoUITests.swift */; };
+		BEBF12651CB1AB6700EA9479 /* HackerNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12621CB1AB6700EA9479 /* HackerNewsData.swift */; };
+		BEBF12661CB1AB6700EA9479 /* HackerNewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12621CB1AB6700EA9479 /* HackerNewsData.swift */; };
+		BEBF12671CB1AB6700EA9479 /* HackerNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */; };
+		BEBF12681CB1AB6700EA9479 /* HackerNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */; };
+		BEBF12691CB1AB6700EA9479 /* HackNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12641CB1AB6700EA9479 /* HackNewsModel.swift */; };
+		BEBF126A1CB1AB6700EA9479 /* HackNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12641CB1AB6700EA9479 /* HackNewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		BEBF12311CB1AB4B00EA9479 /* HackerNewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEBF12361CB1AB4B00EA9479 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BEBF12391CB1AB4B00EA9479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEBF123E1CB1AB4B00EA9479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,9 @@
 		BEBF12501CB1AB4B00EA9479 /* HackerNewsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF12541CB1AB4B00EA9479 /* HackerNewsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsDemoUITests.swift; sourceTree = "<group>"; };
 		BEBF12561CB1AB4B00EA9479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEBF12621CB1AB6700EA9479 /* HackerNewsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsData.swift; sourceTree = "<group>"; };
+		BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsTableViewController.swift; sourceTree = "<group>"; };
+		BEBF12641CB1AB6700EA9479 /* HackNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackNewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */,
-				BEBF12361CB1AB4B00EA9479 /* ViewController.swift */,
+				BEBF12621CB1AB6700EA9479 /* HackerNewsData.swift */,
+				BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */,
+				BEBF12641CB1AB6700EA9479 /* HackNewsModel.swift */,
 				BEBF12381CB1AB4B00EA9479 /* Main.storyboard */,
 				BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */,
 				BEBF123D1CB1AB4B00EA9479 /* LaunchScreen.storyboard */,
@@ -256,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEBF12371CB1AB4B00EA9479 /* ViewController.swift in Sources */,
+				BEBF12671CB1AB6700EA9479 /* HackerNewsTableViewController.swift in Sources */,
+				BEBF12651CB1AB6700EA9479 /* HackerNewsData.swift in Sources */,
+				BEBF12691CB1AB6700EA9479 /* HackNewsModel.swift in Sources */,
 				BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBF12661CB1AB6700EA9479 /* HackerNewsData.swift in Sources */,
 				BEBF124A1CB1AB4B00EA9479 /* HackerNewsDemoTests.swift in Sources */,
+				BEBF12681CB1AB6700EA9479 /* HackerNewsTableViewController.swift in Sources */,
+				BEBF126A1CB1AB6700EA9479 /* HackNewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +498,7 @@
 				BEBF125B1CB1AB4B00EA9479 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEBF125C1CB1AB4B00EA9479 /* Build configuration list for PBXNativeTarget "HackerNewsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +507,7 @@
 				BEBF125E1CB1AB4B00EA9479 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEBF125F1CB1AB4B00EA9479 /* Build configuration list for PBXNativeTarget "HackerNewsDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +516,7 @@
 				BEBF12611CB1AB4B00EA9479 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

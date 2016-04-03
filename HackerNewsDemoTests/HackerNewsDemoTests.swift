@@ -33,4 +33,15 @@ class HackerNewsDemoTests: XCTestCase {
         }
     }
     
+    func testUserRequestReturnsData() {
+        let expectation = expectationWithDescription("Waiting to respond")
+        HackerNewsData.sharedInstance.loadFeed() { (flag) in
+            XCTAssert(HackerNewsData.sharedInstance.newHackerData != nil)
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(5.0, handler:nil)
+    }
+    
+    
 }
