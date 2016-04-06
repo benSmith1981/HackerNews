@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE951DC11CB469F100EEB214 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC01CB469F100EEB214 /* Constants.swift */; };
+		BE951DC21CB5810D00EEB214 /* HackerNewsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC01CB469F100EEB214 /* HackerNewsConstants.swift */; };
+		BE951DC41CB5B14100EEB214 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */; };
 		BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */; };
 		BEBF123A1CB1AB4B00EA9479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBF12381CB1AB4B00EA9479 /* Main.storyboard */; };
 		BEBF123C1CB1AB4B00EA9479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */; };
@@ -41,7 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE951DC01CB469F100EEB214 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE951DC01CB469F100EEB214 /* HackerNewsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerNewsConstants.swift; sourceTree = "<group>"; };
+		BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		BEBF12311CB1AB4B00EA9479 /* HackerNewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBF12391CB1AB4B00EA9479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,7 +114,8 @@
 				BEBF12621CB1AB6700EA9479 /* HackerNewsData.swift */,
 				BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */,
 				BEBF12641CB1AB6700EA9479 /* HackNewsModel.swift */,
-				BE951DC01CB469F100EEB214 /* Constants.swift */,
+				BE951DC01CB469F100EEB214 /* HackerNewsConstants.swift */,
+				BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */,
 				BEBF12381CB1AB4B00EA9479 /* Main.storyboard */,
 				BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */,
 				BEBF123D1CB1AB4B00EA9479 /* LaunchScreen.storyboard */,
@@ -275,8 +278,9 @@
 				BEBF12651CB1AB6700EA9479 /* HackerNewsData.swift in Sources */,
 				BEBF126D1CB1CABE00EA9479 /* Model.xcdatamodeld in Sources */,
 				BEBF12691CB1AB6700EA9479 /* HackNewsModel.swift in Sources */,
+				BE951DC41CB5B14100EEB214 /* NSDateExtension.swift in Sources */,
 				BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */,
-				BE951DC11CB469F100EEB214 /* Constants.swift in Sources */,
+				BE951DC21CB5810D00EEB214 /* HackerNewsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

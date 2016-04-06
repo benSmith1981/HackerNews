@@ -7,8 +7,10 @@
 //
 
 import Foundation
+
 struct HackerNewsModel {
-    var createdTimeStamp: NSDate
+    var createdTimeStampDate: String
+    var timeSinceCreatedInterval: String
     var author: String
     var storyID:NSInteger
     var storyTitle: String
@@ -19,15 +21,20 @@ struct HackerNewsModel {
         self.author = "No Author"
         self.storyID = 1234
         self.storyURL = NSURL(string: "")!
-        self.createdTimeStamp = NSDate()
+        self.createdTimeStampDate = ""
+        self.timeSinceCreatedInterval = ""
+        
 
         if let createdTimeStampString = hackerData["created_at"] as? String {
             let dateFormatter = NSDateFormatter()
-            // 2016-04-03T14:31:43.000Z
-            dateFormatter.dateFormat = "YYYY-MM-DDThh:mm:ss.000Z"
-/*find out and place date format from http://userguide.icu-project.org/formatparse/datetime*/
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            dateFormatter.timeZone = NSTimeZone(name: "UTC")
+            dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 7200)
+            print(dateFormatter.dateFromString(createdTimeStampString))
+            
             if let date = dateFormatter.dateFromString(createdTimeStampString) {
-                self.createdTimeStamp = date
+                self.timeSinceCreatedInterval = NSDate().offsetFrom(date)
+                self.createdTimeStampDate = createdTimeStampString
             }
         }
         

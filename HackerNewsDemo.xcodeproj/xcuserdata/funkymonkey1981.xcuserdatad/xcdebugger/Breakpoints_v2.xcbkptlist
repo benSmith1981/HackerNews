@@ -38,54 +38,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HackerNewsDemo/HackerNewsData.swift"
-            timestampString = "481410801.535959"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "loadFeed(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsData.(loadFeed ((Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsData.swift"
-                  timestampString = "481411099.824303"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "558">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsData.(loadFeed ((Swift.Bool) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsData.swift"
-                  timestampString = "481411100.311785"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "558">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -102,31 +54,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HackerNewsDemo/HackerNewsTableViewController.swift"
-            timestampString = "481592743.483671"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "HackerNewsTableViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNewsDemo/HackNewsModel.swift"
-            timestampString = "481592355.076333"
+            timestampString = "481672886.246211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "init(hackerData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -134,16 +70,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HackerNewsDemo/HackerNewsTableViewController.swift"
-            timestampString = "481592736.198116"
+            filePath = "HackerNewsDemo/HackerNewsData.swift"
+            timestampString = "481670915.043206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "loadFeed(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

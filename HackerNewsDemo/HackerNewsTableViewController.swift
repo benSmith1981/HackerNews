@@ -21,6 +21,8 @@ class HackerNewsTableViewController: UITableViewController {
 //                self.newHackerData = HackerNewsData.sharedInstance.newHackerDataArray
                 self.newHackerDataArray = HackerNewsData.sharedInstance.newHackerDataArray
                 self.hackerTable!.reloadData()
+                self.hackerTable!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
+                self.view.reloadInputViews()
             }
         }
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,11 +36,11 @@ class HackerNewsTableViewController: UITableViewController {
 
     //MARK UITableview methods
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("HackerNewsCell", forIndexPath: indexPath) 
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "HackerNewsCell")
         let row = indexPath.row
         self.newHackerData = self.newHackerDataArray[row]
         cell.textLabel?.text = self.newHackerData!.storyTitle
-        
+        cell.detailTextLabel?.text = self.newHackerData!.author + " - " + self.newHackerData!.timeSinceCreatedInterval + " - " + self.newHackerData!.createdTimeStampDate
         return cell
     }
     
