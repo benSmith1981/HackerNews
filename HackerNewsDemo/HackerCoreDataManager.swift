@@ -1,5 +1,5 @@
 //
-//  Entity.swift
+//  HackerCoreDataManager.swift
 //  HackerNewsDemo
 //
 //  Created by Ben Smith on 10/04/16.
@@ -11,98 +11,92 @@ import CoreData
 
 
 class HackerCoreDataManager {
-
-// Insert code here to add functionality to your managed object subclass
-    class func sharedStore() -> HackerCoreDataManager
-    {
-        struct Static {
-            static var instance: HackerCoreDataManager?
-            static var token: dispatch_once_t = 0
-        }
-        dispatch_once(&Static.token, {
-            Static.instance = HackerCoreDataManager()
-        })
-        return Static.instance!
-    }
+    static let entityName = "HackerNews"
     
-    let managedObjectContext: NSManagedObjectContext =
-        {
-            let moc = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
-            moc.undoManager = nil
-            moc.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-            
-            return moc
-    }()
+    // MARK: Songs API methods
     
-    let managedObjectModel: NSManagedObjectModel =
-        {
-            let url = NSBundle.mainBundle().URLForResource("HackerDataModel", withExtension: "momd")
-            let mom = NSManagedObjectModel(contentsOfURL: url!)
-            
-            return mom!
-    }()
-    
-    let persistentStoreCoordinator: NSPersistentStoreCoordinator
-    
-    init()
-    {
-        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
-        let urls = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)
-        let docUrl: NSURL = urls[urls.count - 1] as NSURL
-        let url = docUrl.URLByAppendingPathComponent("Todo.sqlite")
+    //Get all songs stored from coreDataModel
+    class func getAllArticles() throws -> [HackerManagedObject] {
+        let managedContext = CoreDataManager.sharedInstance.managedObjectContext
         
-        let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
-//        let error: NSErrorPointer = nil
+        // Fetch reqest for entity Person
+        let fetchRequest = NSFetchRequest(entityName: entityName)
         
+        // Getting the result and return an error or the names as ManagedObjects
         do {
-            try persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options)
-        } catch{}
-        
-        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+            let results =
+                try managedContext.executeFetchRequest(fetchRequest)
+            return results as! [HackerManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+            throw error
+        }
     }
     
-    func createNewItemWithName(name: String?) -> HackerNewsModel
-    {
-        let obj = NSEntityDescription.insertNewObjectForEntityForName("HackerDataModel", inManagedObjectContext: managedObjectContext) as! HackerNewsModel
+    //Save the new Article and return a managedObject
+    class func saveNewArticle(article: HackerNewsArticle?) throws -> HackerManagedObject? {
         
-//        if (name != nil) {
-//            obj.
-//            obj.name = name!
-//        }
-        
-        return obj
-    }
-    
-    func save() {
-        let moc = managedObjectContext
-        
-        moc.performBlockAndWait {
-            let error: NSErrorPointer = nil
-            if moc.hasChanges {
-                do {
-                    try moc.save()
-                } catch let error1 as NSError {
-                    error.memory = error1
-                    print("\(error)")
-                } catch {
-                    fatalError()
-                }
+        if let article = article {
+            let managedContext = CoreDataManager.sharedInstance.managedObjectContext
+            
+            // Get the object to insert for CDSong entitiy and given managedObjectContex
+            let hackerNewsArticle: HackerManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedContext) as! HackerManagedObject
+            
+            hackerNewsArticle.cloneFromHackerNewsModel(articleObject: article)
+            // Save the new person
+            do {
+                try managedContext.save()
+                return hackerNewsArticle
+                
+            } catch let error as NSError  {
+                print("Could not save \(error), \(error.userInfo)")
+                throw error
             }
         }
+        return nil
     }
     
-    func objectWithID(objectID: NSManagedObjectID) -> NSManagedObject {
-        return managedObjectContext.objectWithID(objectID)
-    }
-    
-    func deleteObject(object: NSManagedObject) {
-        let moc = managedObjectContext
-        moc.performBlockAndWait {
-            moc.deleteObject(object)
+    //Detele a song from the core data store
+    class func deleteArticle(article: HackerManagedObject) throws -> Bool {
+        CoreDataManager.sharedInstance.managedObjectContext.deleteObject(article)
+        let managedContext = CoreDataManager.sharedInstance.managedObjectContext
+        // delete the article
+        do {
+            try managedContext.save()
+            return true
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+            return false
         }
     }
     
-    deinit {
-        save()
+    /**
+     Check if the song is already saved in local database
+     
+     - parameter trackId: trackId for the song witch need to be verified
+     
+     - returns: if the song is stored returns true, else - false
+     */
+    
+    class func  checkIfArticleAlreadyIsStored(storyID: Int) -> Bool {
+        let managedContext = CoreDataManager.sharedInstance.managedObjectContext
+        
+        // Fetch reqest for entity Person
+        let fetchRequest = NSFetchRequest(entityName: entityName)
+        
+        // Adding the predicate
+        let predicate = NSPredicate(format: "storyID == %@", "\(storyID)")
+        fetchRequest.predicate = predicate
+        
+        // Getting the result and return an error or the names as ManagedObjects
+        do {
+            let results =
+                try managedContext.executeFetchRequest(fetchRequest) as! [HackerManagedObject]
+            return ( results.count > 0 ) ? true : false
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+            return false
+        }
     }
+
 }

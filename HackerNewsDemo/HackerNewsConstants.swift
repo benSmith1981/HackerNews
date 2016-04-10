@@ -8,7 +8,5 @@
 
 import Foundation
 struct HackerNewsConstants{
-    struct jsonKeys{
-        static let  createdAtKey = "created_at_i"
-    }
+
 }

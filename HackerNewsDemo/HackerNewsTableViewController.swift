@@ -10,15 +10,15 @@ import UIKit
 
 class HackerNewsTableViewController: UITableViewController {
 
-    var newHackerDataArray:[HackerNewsModel] = []
-    var newHackerData: HackerNewsModel? //struct to hold data we get back
+    var newHackerDataArray:[HackerNewsArticle] = []
+    var newHackerData: HackerNewsArticle? //struct to hold data we get back
     @IBOutlet var hackerTable: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HackerNewsData.sharedInstance.loadFeed { (success) in
+        HackerNewsAPIService.sharedInstance.loadFeed { (success) in
             if(success){
-                self.newHackerDataArray = HackerNewsData.sharedInstance.newHackerDataArray
+                self.newHackerDataArray = HackerNewsAPIService.sharedInstance.newHackerDataArray
                 self.hackerTable!.reloadData()
                 self.hackerTable!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
             }
@@ -38,7 +38,7 @@ class HackerNewsTableViewController: UITableViewController {
         let row = indexPath.row
         self.newHackerData = self.newHackerDataArray[row]
         cell.textLabel?.text = self.newHackerData!.storyTitle
-        cell.detailTextLabel?.text = self.newHackerData!.author + " - " + self.newHackerData!.timeSinceCreatedInterval + " - " + self.newHackerData!.createdTimeStampDate
+        cell.detailTextLabel?.text = self.newHackerData!.author! + " - " + self.newHackerData!.timeSinceCreatedInterval! + " - " + self.newHackerData!.createdTimeStampDate!
         return cell
     }
     

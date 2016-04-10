@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SystemConfiguration
 
 let hackerNewsPath = "http://hn.algolia.com/api/v1/search_by_date?query=ios"
 public typealias HackerData = [String: AnyObject]
@@ -14,15 +15,37 @@ public typealias HackerData = [String: AnyObject]
 typealias APIResponse = (Bool) -> Void
 typealias APIServiceResponse = (HackerData?, NSError?) -> Void
 
-class HackerNewsData {
+class HackerNewsAPIService {
     
-    
-    static let sharedInstance = HackerNewsData()
-    var newHackerData: HackerNewsModel? //struct to hold data we get back
-    var newHackerDataArray:[HackerNewsModel] = []
+    static let sharedInstance = HackerNewsAPIService()
+    var newHackerData: HackerNewsArticle? //struct to hold data we get back
+    var newHackerDataArray:[HackerNewsArticle] = []
     private var hackerInfoDict:HackerData = [:] //dictionary to hold data from json
 
     private init() {}
+    
+    /**
+     Check if there is an active network connection for the device
+     
+     - returns: Network connetion status (Bool)
+     */
+    
+    func isConnectedToNetwork() -> Bool {
+        
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+        }
+        var flags = SCNetworkReachabilityFlags()
+        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            return false
+        }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
     
     func loadFeed(onCompletion: APIResponse) {
         makeLoadrequest(hackerNewsPath, onCompletion: { json, err in
@@ -30,7 +53,7 @@ class HackerNewsData {
                 //store the json in an object
                 for jsonObject in (json["hits"] as? NSArray)!{
                     print(jsonObject)
-                    self.newHackerData = HackerNewsModel.init(hackerData: jsonObject as! HackerData)
+                    self.newHackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
                     self.newHackerDataArray.append(self.newHackerData!)
                 }
                 onCompletion(true)
