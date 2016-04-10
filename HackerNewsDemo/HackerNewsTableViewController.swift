@@ -18,11 +18,9 @@ class HackerNewsTableViewController: UITableViewController {
         super.viewDidLoad()
         HackerNewsData.sharedInstance.loadFeed { (success) in
             if(success){
-//                self.newHackerData = HackerNewsData.sharedInstance.newHackerDataArray
                 self.newHackerDataArray = HackerNewsData.sharedInstance.newHackerDataArray
                 self.hackerTable!.reloadData()
                 self.hackerTable!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
-                self.view.reloadInputViews()
             }
         }
         // Do any additional setup after loading the view, typically from a nib.

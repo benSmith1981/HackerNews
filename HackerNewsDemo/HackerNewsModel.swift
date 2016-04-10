@@ -7,20 +7,27 @@
 //
 
 import Foundation
+import CoreData
 
-struct HackerNewsModel {
-    var createdTimeStampDate: String
-    var timeSinceCreatedInterval: String
-    var author: String
-    var storyID:NSInteger
-    var storyTitle: String
-    var storyURL: NSURL
+typealias TimeStamp = String
+typealias Author = String
+typealias StoryID = NSInteger
+typealias StoryTitle = String
+typealias StoryURL = NSURL
+
+class HackerNewsModel: NSManagedObject {
+    @NSManaged var createdTimeStampDate: TimeStamp
+    @NSManaged var timeSinceCreatedInterval: TimeStamp
+    @NSManaged var author: Author
+    @NSManaged var storyID: StoryID
+    @NSManaged var storyTitle: StoryTitle
+    @NSManaged var storyURL: String
     
     init(hackerData: HackerData) {
         self.storyTitle = "No Title"
         self.author = "No Author"
         self.storyID = 1234
-        self.storyURL = NSURL(string: "")!
+        self.storyURL = ""
         self.createdTimeStampDate = ""
         self.timeSinceCreatedInterval = ""
         
@@ -52,9 +59,9 @@ struct HackerNewsModel {
             self.storyTitle = storyTitle
         }
         
-        if let storyURL = hackerData["story_url"] as? NSURL {
+        if let storyURL = hackerData["story_url"] as? String {
             self.storyURL = storyURL
-        } else if let url = hackerData["url"] as? NSURL {
+        } else if let url = hackerData["url"] as? String {
             self.storyURL = url
         }
     }
