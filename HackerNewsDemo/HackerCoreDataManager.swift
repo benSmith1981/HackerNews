@@ -11,7 +11,7 @@ import CoreData
 
 
 class HackerCoreDataManager {
-    static let entityName = "HackerNews"
+    static let entityName = "HackerNewsModel"
     
     // MARK: Songs API methods
     
@@ -24,8 +24,7 @@ class HackerCoreDataManager {
         
         // Getting the result and return an error or the names as ManagedObjects
         do {
-            let results =
-                try managedContext.executeFetchRequest(fetchRequest)
+            let results = try managedContext.executeFetchRequest(fetchRequest)
             return results as! [HackerManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -42,7 +41,7 @@ class HackerCoreDataManager {
             // Get the object to insert for CDSong entitiy and given managedObjectContex
             let hackerNewsArticle: HackerManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedContext) as! HackerManagedObject
             
-            hackerNewsArticle.cloneFromHackerNewsModel(articleObject: article)
+            hackerNewsArticle.cloneFromHackerNewsModel(article)
             // Save the new person
             do {
                 try managedContext.save()
@@ -78,7 +77,7 @@ class HackerCoreDataManager {
      - returns: if the song is stored returns true, else - false
      */
     
-    class func  checkIfArticleAlreadyIsStored(storyID: Int) -> Bool {
+    class func checkIfArticleAlreadyIsStored(storyID: Int) -> Bool {
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
         
         // Fetch reqest for entity Person

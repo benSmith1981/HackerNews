@@ -1,0 +1,47 @@
+Thank you for taking the time to speak with me today.
+
+As I mentioned in our call, we would like you to build a small mobile application to test your knowledge of iOS or Android technologies.
+
+
+For the test, you can choose to complete it using any one of:
+
+* Swift for iOS, supporting a minimum of iOS7 or iOS8, as an Xcode project
+* Objective-C for iOS, supporting a minimum of iOS7 or iOS8, as an Xcode project
+* Java for Android, supporting a minimum of Android 4.0, as an Android Studio project
+
+Please refer to the attached wireframe for an understanding of what the finished app should look like.
+
+On startup, and when the list view is pulled down to refresh, the app should connect to this API which shows recently posted articles about Android or iOS on Hacker News:
+
+
+
+If you’re doing the task in iOS use:
+
+http://hn.algolia.com/api/v1/search_by_date?query=ios
+
+
+
+If you’re doing the task in Android use:
+
+http://hn.algolia.com/api/v1/search_by_date?query=android
+
+
+
+If the app is used offline, it should show the items downloaded last time.
+
+The main view of the app is a scrolling list view of recent posts in date order. If the user taps on a post, show a web view (within the app) with the linked article. Also, you should be able to swipe on a cell, and delete an individual post from this view (see mockups). Once a post is deleted it should not reappear.
+
+It is not necessary to create an optimised layout for tablet devices. 
+
+You are welcome to use any 3rd party libraries to complete the task.
+
+Send us your completed code - either as a public Github repo, or zipped and emailed to jobs@reigndesign.com. Include a README which explains anything we need to do to run the demo app, for example installing CocoaPods or a specific version of the ADT tools.
+
+If you have any questions about the task, please let us know.
+
+
+Once again, thank you for your time and we are looking forward to see the results!
+
+Thanks,
+
+- Fluxà

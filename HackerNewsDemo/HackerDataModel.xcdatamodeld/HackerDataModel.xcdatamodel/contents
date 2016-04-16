@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
-    <entity name="HackerNews" representedClassName="HackerDataModel.HackNewsModel" syncable="YES">
+    <entity name="HackerNewsModel" representedClassName=".HackerManagedObject" syncable="YES">
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdTimeStampDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="storyTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeSinceCreatedInterval" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HackerNews" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="HackerNewsModel" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

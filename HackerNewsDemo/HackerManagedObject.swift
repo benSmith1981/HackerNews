@@ -23,9 +23,10 @@ class HackerManagedObject: NSManagedObject {
     @NSManaged var storyTitle: StoryTitle
     @NSManaged var storyURL: StoryURL
     
-    func cloneFromHackerNewsModel(articleObject hackerArticle:HackerNewsArticle) {
+    func cloneFromHackerNewsModel(hackerArticle:HackerNewsArticle) {
         
         // Set the needed values from hacker news model object
+        
         self.createdTimeStampDate = hackerArticle.createdTimeStampDate ?? "No time stamp"
         self.timeSinceCreatedInterval = hackerArticle.timeSinceCreatedInterval ?? "No time since created"
         self.author = hackerArticle.author ?? "No author"

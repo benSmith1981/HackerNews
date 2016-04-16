@@ -9,11 +9,12 @@
 import Foundation
 
 struct jsonKeys{
-    static let  createdAtKey = "created_at_i"
+    static let  createdAtKey = "created_at"
     static let  author = "author"
     static let  storyID = "story_id"
     static let  storyTitle = "story_title"
     static let  title = "title"
+    static let  tags = "_tags"
     static let  storyURL = "story_url"
     static let  url = "url"
 }
@@ -44,6 +45,11 @@ struct HackerNewsArticle {
         }
         if let storyID = hackerData[jsonKeys.storyID] as? Int {
             self.storyID = storyID
+        }
+        if let tags = hackerData[jsonKeys.tags] as? NSArray {
+            let numbersAsStrings = matchesForRegexInText("\\d+", tags[2] as! String) // [String]
+            let numbersAsInts = numbersAsStrings.map { $0.toInt()! }  // [Int]
+            print(tags)
         }
         if let storyTitle = hackerData[jsonKeys.storyTitle] as? String ??  hackerData[jsonKeys.title] as? String {
             self.storyTitle = storyTitle
