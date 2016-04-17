@@ -45,11 +45,14 @@ struct HackerNewsArticle {
         }
         if let storyID = hackerData[jsonKeys.storyID] as? Int {
             self.storyID = storyID
-        }
-        if let tags = hackerData[jsonKeys.tags] as? NSArray {
-            let numbersAsStrings = matchesForRegexInText("\\d+", tags[2] as! String) // [String]
-            let numbersAsInts = numbersAsStrings.map { $0.toInt()! }  // [Int]
-            print(tags)
+        } else if let tags = hackerData[jsonKeys.tags] as? NSArray {
+            let intString = tags[2].componentsSeparatedByCharactersInSet(
+                NSCharacterSet
+                    .decimalDigitCharacterSet()
+                    .invertedSet)
+                .joinWithSeparator("")
+            self.storyID = Int(intString)
+            print(self.storyID)
         }
         if let storyTitle = hackerData[jsonKeys.storyTitle] as? String ??  hackerData[jsonKeys.title] as? String {
             self.storyTitle = storyTitle
@@ -58,4 +61,21 @@ struct HackerNewsArticle {
             self.storyURL = storyURL
         }
     }
+    
+    /**
+     Constructor witch convert a CoreData Song to a regulary object
+     
+     - parameter cdSong: CoreData Object
+     
+     - returns: no return
+     */
+    init(withHackerManagedObject hackerArticle: HackerManagedObject) {
+        self.createdTimeStampDate = hackerArticle.createdTimeStampDate ?? "No time stamp"
+        self.timeSinceCreatedInterval = hackerArticle.timeSinceCreatedInterval ?? "No time since created"
+        self.author = hackerArticle.author ?? "No author"
+        self.storyID = Int(hackerArticle.storyID) ?? -1
+        self.storyTitle = hackerArticle.storyTitle ?? "No title"
+        self.storyURL = hackerArticle.storyURL ?? "No story URL"
+    }
+
 }

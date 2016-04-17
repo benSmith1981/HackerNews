@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE2983BD1CC28869001E1957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC01CB469F100EEB214 /* Constants.swift */; };
+		BE2983C31CC435CC001E1957 /* DetailHackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2983C21CC435CC001E1957 /* DetailHackerView.swift */; };
 		BE32A8A51CBA81B50074230C /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */; };
 		BE32A8A71CBAF4DC0074230C /* HackerManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */; };
 		BE32A8A91CBB01100074230C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A81CBB01100074230C /* CoreDataManager.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2983C21CC435CC001E1957 /* DetailHackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHackerView.swift; sourceTree = "<group>"; };
 		BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerCoreDataManager.swift; sourceTree = "<group>"; };
 		BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerManagedObject.swift; sourceTree = "<group>"; };
 		BE32A8A81CBB01100074230C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				BE32A89B1CBA7C7E0074230C /* Coredata */,
 				BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */,
 				BEBF12631CB1AB6700EA9479 /* HackerNewsTableViewController.swift */,
+				BE2983C21CC435CC001E1957 /* DetailHackerView.swift */,
 				BE951DC01CB469F100EEB214 /* Constants.swift */,
 				BEBF12381CB1AB4B00EA9479 /* Main.storyboard */,
 				BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */,
@@ -316,6 +319,7 @@
 				BE32A8A71CBAF4DC0074230C /* HackerManagedObject.swift in Sources */,
 				BE951DC41CB5B14100EEB214 /* NSDateExtension.swift in Sources */,
 				BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */,
+				BE2983C31CC435CC001E1957 /* DetailHackerView.swift in Sources */,
 				BE32A8A91CBB01100074230C /* CoreDataManager.swift in Sources */,
 				BE951DC21CB5810D00EEB214 /* Constants.swift in Sources */,
 			);
