@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailHackerView: UINavigationController {
+class DetailHackerView: UIViewController {
  
     @IBOutlet var newsWebView: UIWebView!
     //MARK: Proprietes
@@ -17,10 +17,10 @@ class DetailHackerView: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let urlUnwrap =  article!.storyURL {
-//            let url = NSURL (string: urlUnwrap)
-//            let requestObj = NSURLRequest(URL: url!);
-//            newsWebView.loadRequest(requestObj)
-//        }
+        if let urlUnwrap =  article!.storyURL {
+            let url = NSURL (string: urlUnwrap)
+            let requestObj = NSURLRequest(URL: url!);
+            newsWebView.loadRequest(requestObj)
+        }
     }
 }

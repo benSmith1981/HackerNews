@@ -113,7 +113,6 @@ extension HackerNewsAPIService {
 extension HackerNewsAPIService {
 
     func saveArticle(article: HackerNewsArticle) {
-//        if !HackerCore .checkIfTrackAlreadyIsStored(trackId) {
         do {
             if !HackerCoreDataManager.checkIfArticleAlreadyIsStored(article.storyID!) {
                 try HackerCoreDataManager.saveNewArticle(article)

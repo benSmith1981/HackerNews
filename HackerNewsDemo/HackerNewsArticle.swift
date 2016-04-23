@@ -17,6 +17,7 @@ struct jsonKeys{
     static let  tags = "_tags"
     static let  storyURL = "story_url"
     static let  url = "url"
+    static let  highlightResult = "_highlightResult"
 }
 
 struct HackerNewsArticle {
@@ -59,13 +60,20 @@ struct HackerNewsArticle {
         }
         if let storyURL = hackerData[jsonKeys.storyURL] as? String ?? hackerData[jsonKeys.url] as? String {
             self.storyURL = storyURL
+        } else if let tags = hackerData[jsonKeys.highlightResult] as? HackerData,
+            let highlightresults = tags[jsonKeys.highlightResult] as? NSArray{
+                for highlightresult in highlightresults {
+                    if let highlightresult = highlightresult[jsonKeys.storyURL] {
+                        print(highlightresult)
+                    }
+                }
         }
     }
     
     /**
-     Constructor witch convert a CoreData Song to a regulary object
+     Constructor witch convert a CoreData HackerManagedObject to a regulary object
      
-     - parameter cdSong: CoreData Object
+     - parameter hackerArticle: HackerManagedObject
      
      - returns: no return
      */

@@ -55,7 +55,7 @@ class HackerCoreDataManager {
         return nil
     }
     
-    //Detele a song from the core data store
+    //Delete an article from the core data store
     class func deleteArticle(article: HackerManagedObject) throws -> Bool {
         CoreDataManager.sharedInstance.managedObjectContext.deleteObject(article)
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
@@ -70,11 +70,11 @@ class HackerCoreDataManager {
     }
     
     /**
-     Check if the song is already saved in local database
+     Check if the Article is already saved in local database
      
      - parameter trackId: trackId for the song witch need to be verified
      
-     - returns: if the song is stored returns true, else - false
+     - returns: if the Article is stored returns true, else - false
      */
     
     class func checkIfArticleAlreadyIsStored(storyID: Int) -> Bool {
