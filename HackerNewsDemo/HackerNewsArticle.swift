@@ -11,8 +11,11 @@ import Foundation
 struct jsonKeys{
     static let  createdAtKey = "created_at"
     static let  author = "author"
+    static let  comment_text = "comment_text"
     static let  storyID = "story_id"
     static let  storyTitle = "story_title"
+    static let  storyText = "story_text"
+
     static let  title = "title"
     static let  tags = "_tags"
     static let  storyURL = "story_url"
@@ -27,6 +30,7 @@ struct HackerNewsArticle {
     var storyID:Int?
     var storyTitle: String?
     var storyURL: String?
+    var storyText: String?
     
     init(hackerData: HackerData) {
         if let createdTimeStampString = hackerData[jsonKeys.createdAtKey] as? String {
@@ -44,6 +48,14 @@ struct HackerNewsArticle {
         if let author = hackerData[jsonKeys.author] as? String {
             self.author = author
         }
+        
+        if let commentText = hackerData[jsonKeys.comment_text] as? String {
+            self.storyText = commentText
+        } else if let storyTextUnwrap = hackerData[jsonKeys.storyText] as? String {
+            self.storyText = storyTextUnwrap
+        }
+
+        
         if let storyID = hackerData[jsonKeys.storyID] as? Int {
             self.storyID = storyID
         } else if let tags = hackerData[jsonKeys.tags] as? NSArray {
@@ -84,6 +96,8 @@ struct HackerNewsArticle {
         self.storyID = Int(hackerArticle.storyID) ?? -1
         self.storyTitle = hackerArticle.storyTitle ?? "No title"
         self.storyURL = hackerArticle.storyURL ?? "No story URL"
+        self.storyText = hackerArticle.storyText ?? "No story text"
+
     }
 
 }

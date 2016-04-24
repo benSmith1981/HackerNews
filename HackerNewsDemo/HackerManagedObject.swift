@@ -22,6 +22,8 @@ class HackerManagedObject: NSManagedObject {
     @NSManaged var storyID: StoryID
     @NSManaged var storyTitle: StoryTitle
     @NSManaged var storyURL: StoryURL
+    @NSManaged var storyText: String
+
     
     func cloneFromHackerNewsModel(hackerArticle:HackerNewsArticle) {
         
@@ -33,6 +35,7 @@ class HackerManagedObject: NSManagedObject {
         self.storyID = Int64(hackerArticle.storyID!) ?? -1
         self.storyTitle = hackerArticle.storyTitle ?? "No title"
         self.storyURL = hackerArticle.storyURL ?? "No story URL"
+        self.storyText = hackerArticle.storyText ?? "No Text"
         
     }
     

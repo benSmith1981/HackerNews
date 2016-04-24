@@ -137,12 +137,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HackerNewsDemo/HackerNewsArticle.swift"
-            timestampString = "483104216.329387"
+            filePath = "HackerNewsDemo/DetailHackerView.swift"
+            timestampString = "483192716.644103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "webViewDidFinishLoad(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerNewsDemo/HackerNewsArticle.swift"
+            timestampString = "483191195.057389"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "init(hackerData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNewsDemo/HackerNewsArticle.swift"
-            timestampString = "483104201.944278"
+            timestampString = "483191196.349265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "init(hackerData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNewsDemo/HackerNewsArticle.swift"
-            timestampString = "483104205.738544"
+            timestampString = "483191416.522705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "init(hackerData:)"
             landmarkType = "5">
          </BreakpointContent>

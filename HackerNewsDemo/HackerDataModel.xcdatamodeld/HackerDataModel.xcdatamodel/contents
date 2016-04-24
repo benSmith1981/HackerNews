@@ -4,11 +4,12 @@
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdTimeStampDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="storyText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storyURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeSinceCreatedInterval" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HackerNewsModel" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="HackerNewsModel" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>
