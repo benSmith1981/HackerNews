@@ -29,6 +29,11 @@ class HackerNewsTableViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl!.addTarget(self, action: #selector(loadHackerNews(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            self.tableView.reloadData()
+        }
+        loadFeedArticles()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,17 +59,26 @@ class HackerNewsTableViewController: UITableViewController {
     //MARK: Load Hacker news table update data
 
     /**
-     Load Hacker news on refresh when user pulls down on table view
+     Load Hacker news on refresh pull
      
      - parameter sender:AnyObject object that refreshes table
      */
     func loadHackerNews(sender:AnyObject) {
+        loadFeedArticles()
+    }
+    
+    //MARK: Load Hacker news table update data
+    
+    /**
+     Load articles from feed, check for network error, save to our array so table update, end refresh
+     */
+    func loadFeedArticles() {
+        // Load the feed
         HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
             if code == HackerNewsConstants.serverCodes.noConnection {
                 self.displayAlertMessage(HackerNewsConstants.serverMessages.noConnection, alertDescription: "")
             }
             self.savedArticles = try! HackerCoreDataManager.getAllArticles()
-            self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: HackerNewsConstants.tableCellIDs.HackerNewsCell)
             self.refreshControl!.endRefreshing()
         }
     }
@@ -73,8 +87,7 @@ class HackerNewsTableViewController: UITableViewController {
 extension HackerNewsTableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(HackerNewsConstants.tableCellIDs.HackerNewsCell) as! HackerTableCell
-
+        let cell = tableView.dequeueReusableCellWithIdentifier(HackerNewsConstants.tableCellIDs.HackerTableCell) as! HackerTableCell
         let row = indexPath.row
         let newHackerData = self.savedArticles[row]
         let title = newHackerData.storyTitle

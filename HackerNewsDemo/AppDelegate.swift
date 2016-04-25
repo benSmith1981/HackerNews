@@ -14,12 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Load the feed then Purge articles older than a week on startup to clear coredata
-        HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
-            HackerCoreDataManager.purgeOldArticles(timeInSeconds.weekInSeconds)
-
-        }
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool{
+        HackerCoreDataManager.purgeOldArticles(timeInSeconds.weekInSeconds) //purge old articles
         return true
     }
 
