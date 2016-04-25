@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90DE878D1CCE268500C1E706 /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE878C1CCE268500C1E706 /* HackerCoreDataManager.swift */; };
 		BE2983BD1CC28869001E1957 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC01CB469F100EEB214 /* Constants.swift */; };
 		BE2983C31CC435CC001E1957 /* DetailHackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2983C21CC435CC001E1957 /* DetailHackerView.swift */; };
-		BE32A8A51CBA81B50074230C /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */; };
 		BE32A8A71CBAF4DC0074230C /* HackerManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */; };
 		BE32A8A91CBB01100074230C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A81CBB01100074230C /* CoreDataManager.swift */; };
 		BE951DC21CB5810D00EEB214 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC01CB469F100EEB214 /* Constants.swift */; };
@@ -18,7 +18,6 @@
 		BEA333FB1CCD9E9600F5755B /* HackerManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */; };
 		BEA333FC1CCD9EAD00F5755B /* HackerNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12631CB1AB6700EA9479 /* HackerNewsVC.swift */; };
 		BEA333FE1CCE0B1700F5755B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA333FD1CCE0B1700F5755B /* UIViewControllerExtensions.swift */; };
-		BEA333FF1CCE142100F5755B /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */; };
 		BEA334001CCE142E00F5755B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A8A81CBB01100074230C /* CoreDataManager.swift */; };
 		BEA334011CCE143C00F5755B /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */; };
 		BEA334021CCE145400F5755B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA333FD1CCE0B1700F5755B /* UIViewControllerExtensions.swift */; };
@@ -54,8 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90DE878C1CCE268500C1E706 /* HackerCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerCoreDataManager.swift; sourceTree = "<group>"; };
 		BE2983C21CC435CC001E1957 /* DetailHackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHackerView.swift; sourceTree = "<group>"; };
-		BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HackerCoreDataManager.swift; path = /Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerCoreDataManager.swift; sourceTree = "<absolute>"; };
 		BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerManagedObject.swift; sourceTree = "<group>"; };
 		BE32A8A81CBB01100074230C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE951DC01CB469F100EEB214 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -109,7 +108,7 @@
 			children = (
 				BE32A8A81CBB01100074230C /* CoreDataManager.swift */,
 				BE32A8A61CBAF4DC0074230C /* HackerManagedObject.swift */,
-				BE32A8A31CBA81B50074230C /* HackerCoreDataManager.swift */,
+				90DE878C1CCE268500C1E706 /* HackerCoreDataManager.swift */,
 			);
 			name = Coredata;
 			sourceTree = "<group>";
@@ -326,7 +325,7 @@
 				BEBF126D1CB1CABE00EA9479 /* HackerDataModel.xcdatamodeld in Sources */,
 				BEBF12691CB1AB6700EA9479 /* HackerNewsArticle.swift in Sources */,
 				BEA333FE1CCE0B1700F5755B /* UIViewControllerExtensions.swift in Sources */,
-				BE32A8A51CBA81B50074230C /* HackerCoreDataManager.swift in Sources */,
+				90DE878D1CCE268500C1E706 /* HackerCoreDataManager.swift in Sources */,
 				BE32A8A71CBAF4DC0074230C /* HackerManagedObject.swift in Sources */,
 				BE951DC41CB5B14100EEB214 /* NSDateExtension.swift in Sources */,
 				BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */,
@@ -346,7 +345,6 @@
 				BEA333FB1CCD9E9600F5755B /* HackerManagedObject.swift in Sources */,
 				BEBF124A1CB1AB4B00EA9479 /* HackerNewsDemoTests.swift in Sources */,
 				BEA334031CCE145700F5755B /* DetailHackerView.swift in Sources */,
-				BEA333FF1CCE142100F5755B /* HackerCoreDataManager.swift in Sources */,
 				BEBF126A1CB1AB6700EA9479 /* HackerNewsArticle.swift in Sources */,
 				BEA334011CCE143C00F5755B /* NSDateExtension.swift in Sources */,
 				BEA334001CCE142E00F5755B /* CoreDataManager.swift in Sources */,
