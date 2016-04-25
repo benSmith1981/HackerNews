@@ -52,7 +52,7 @@
                                 <connections>
                                     <outlet property="author" destination="Ray-iP-Q4E" id="yzW-fU-WhF"/>
                                     <outlet property="storyTitle" destination="AZD-M5-wTV" id="IJA-8w-11a"/>
-                                    <segue destination="URw-Fp-D1C" kind="show" identifier="DetailHackerView" id="BGY-od-Yzi"/>
+                                    <segue destination="URw-Fp-D1C" kind="show" identifier="DetailHackerView" trigger="accessoryAction" id="1HG-0r-sEh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
