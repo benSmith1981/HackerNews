@@ -43,7 +43,7 @@ class HackerCoreDataManager {
         let fetchRequest = NSFetchRequest(entityName: entityName)
         // Adding the predicate
         // 172800= 2 days in seconds, so articles less than this are two days old, then we purge
-        let predicate = NSPredicate(format: "createdTimeSeconds < %@" , "\(Int64(NSDate().timeIntervalSince1970 - 172800))")
+        let predicate = NSPredicate(format: "createdTimeSeconds < %@" , "\(Int64(NSDate().timeIntervalSince1970 - Double(HackerNewsConstants.timeInSeconds.twoDaysInSeconds)))")
         fetchRequest.predicate = predicate
 
         // Getting the result and return an error or the names as ManagedObjects

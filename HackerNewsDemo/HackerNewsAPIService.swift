@@ -20,8 +20,6 @@ class HackerNewsAPIService {
     private var serverMessage: ServerMessage?
     private var serverCode: ServerCode?
     static let sharedInstance = HackerNewsAPIService()
-    private var newHackerData: HackerNewsArticle? //struct to hold data we get back
-    var newHackerDataArray:[HackerManagedObject] = []
     private var hackerInfoDict:HackerData = [:] //dictionary to hold data from json
 
     private init() {}
@@ -36,16 +34,16 @@ class HackerNewsAPIService {
         }
         var flags = SCNetworkReachabilityFlags()
         if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-            networkCheckResponse(false, HackerNewsConstants.serverMessages.cannotConnectToServer, nil)
+            networkCheckResponse(false, HackerNewsConstants.serverMessages.cannotConnectToServer, HackerNewsConstants.serverCodes.noConnection)
         }
         let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
         if !isReachable {
-            networkCheckResponse(false, HackerNewsConstants.serverMessages.serverNotReachable, nil)
+            networkCheckResponse(false, HackerNewsConstants.serverMessages.serverNotReachable, HackerNewsConstants.serverCodes.noConnection)
         }
         
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         if needsConnection {
-            networkCheckResponse(false, HackerNewsConstants.serverMessages.needNetworkConnection, nil)
+            networkCheckResponse(false, HackerNewsConstants.serverMessages.needNetworkConnection, HackerNewsConstants.serverCodes.noConnection)
         }
         networkCheckResponse(true, HackerNewsConstants.serverMessages.OK, nil)
     }
@@ -83,8 +81,6 @@ extension HackerNewsAPIService {
                         //iterate our objects to store
                         for jsonObject in (json["hits"] as? NSArray)!{
                             print(jsonObject)
-                            //creat new object
-//                            self.newHackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
                             //send object ot coredata for storage
                             let hackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
                             self.saveArticle(hackerData)
@@ -98,12 +94,7 @@ extension HackerNewsAPIService {
                 })
             } else {
                 //Service check failed, no network connection
-                do {
-                    self.newHackerDataArray = try self.getAllArticles()
-                    onCompletion(false, HackerNewsConstants.serverMessages.coreDataFail, nil)
-                } catch{
-                    onCompletion(false, HackerNewsConstants.serverMessages.coreDataFail, nil)
-                }
+                onCompletion(false, message, code)
                 
             }
         }

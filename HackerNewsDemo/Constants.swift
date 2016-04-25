@@ -52,7 +52,9 @@ struct HackerNewsConstants{
     }
     
     struct timeInSeconds{
-        static let twoDays = 172800
+        static let twoDaysInSeconds = 172800
+        static let oneDaysInSeconds = 86400
+        static let twoHoursInSeconds = 7200
     }
 
     struct nsuserdefaultKeys{

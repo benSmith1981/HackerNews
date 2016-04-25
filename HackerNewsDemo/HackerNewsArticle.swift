@@ -29,7 +29,7 @@ struct HackerNewsArticle {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
             dateFormatter.timeZone = NSTimeZone(name: "UTC")
-            dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 7200)
+            dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: HackerNewsConstants.timeInSeconds.twoHoursInSeconds)
             print(dateFormatter.dateFromString(createdTimeStampString))
             
             if let date = dateFormatter.dateFromString(createdTimeStampString) {

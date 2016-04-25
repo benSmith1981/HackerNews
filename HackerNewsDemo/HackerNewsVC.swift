@@ -23,7 +23,6 @@ class HackerNewsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         savedArticles = try! HackerCoreDataManager.getAllArticles()
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -46,8 +45,7 @@ class HackerNewsTableViewController: UITableViewController {
         
         if (segue.identifier == "DetailHackerView") {
             // initialize new view controller and cast it as your view controller
-            let navVC = segue.destinationViewController
-            let detailView = navVC as! DetailHackerView
+            let detailView = segue.destinationViewController as! DetailHackerView
             // your new view controller should have property that will store passed value
             detailView.article = self.hackerArticleToPass
         }
@@ -58,7 +56,10 @@ class HackerNewsTableViewController: UITableViewController {
     
      func loadHackerNews(sender:AnyObject) {
         HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
-            if(success){
+            if(success || code == HackerNewsConstants.serverCodes.noConnection){
+                if code == HackerNewsConstants.serverCodes.noConnection {
+                    self.displayAlertMessage(HackerNewsConstants.serverMessages.noConnection, alertDescription: "")
+                }
                 self.savedArticles = try! HackerCoreDataManager.getAllArticles()
                 self.tableView.reloadData()
                 self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
@@ -98,9 +99,6 @@ extension HackerNewsTableViewController {
             let articleToDelete = self.savedArticles[indexPath.row]
             let _ = try? HackerCoreDataManager.setArticleToDeleted(articleToDelete)
             self.savedArticles.removeAtIndex(indexPath.row)
-            self.tableView.reloadData()
-            
-
         }
     }
 }

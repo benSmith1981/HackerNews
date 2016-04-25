@@ -21,25 +21,34 @@ class DetailHackerView: UIViewController, UIWebViewDelegate  {
         super.viewDidLoad()
         self.loadingView.hidden = false
         self.loadingWheel.startAnimating()
-
-        newsWebView.delegate = self
-        if let storyUrlString =  article!.storyURL,
-            let urlUnwrap = NSURL (string: storyUrlString){
+        
+        HackerNewsAPIService.sharedInstance.isConnectedToNetwork{ (success, message, code) in
+            guard success else {
+                self.displayAlertMessage(message!, alertDescription: "")
+                return
+            }
+            self.newsWebView.delegate = self
+            if let storyUrlString =  self.article!.storyURL,
+                let urlUnwrap = NSURL (string: storyUrlString){
                 let requestObj = NSURLRequest(URL: urlUnwrap);
-                newsWebView.loadRequest(requestObj)
-        } else { //no URL then try reconstruct the story into an html format
-//            let myHTML = "<html><body><h1> " + (article?.storyTitle)! + "</h1><h2>" + (article?.storyText)! + "</h2></body></html>";
-            let myHTML = "<html><body><h1>Title</h1><h2>" + (article?.storyText)! + "</h2></body></html>";
-
-            self.newsWebView.loadHTMLString(myHTML, baseURL: nil)
+                self.newsWebView.loadRequest(requestObj)
+            } else { //no URL then try reconstruct the story into an html format
+                if let storyTitleUnwrapped = self.article?.storyTitle,
+                    let storyTextUnwrapped = self.article?.storyText{
+                    let myHTML = "<html><body><h1>" + storyTitleUnwrapped + "</h1><h2>" + storyTextUnwrapped + "</h2></body></html>";
+                    self.newsWebView.loadHTMLString(myHTML, baseURL: nil)
+                } else if let storyTextUnwrapped = self.article?.storyText{
+                    let myHTML = "<html><body><h1>Title</h1><h2>" + storyTextUnwrapped + "</h2></body></html>";
+                    self.newsWebView.loadHTMLString(myHTML, baseURL: nil)
+                }
+            }
         }
+
+
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
         self.loadingView.hidden = true
         self.loadingWheel.stopAnimating()
-
     }
-
-
 }
