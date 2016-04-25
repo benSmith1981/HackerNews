@@ -10,9 +10,10 @@ import UIKit
 
 class HackerNewsTableViewController: UITableViewController {
 
+    //Article to pass to detail view
     var hackerArticleToPass: HackerNewsArticle?
 
-    //MARK: Properties
+    //MARK: SavedArticle array that also refreshes our table on update so that it display new list of articles
     var savedArticles = [HackerManagedObject]() {
         didSet {
             //everytime savedarticles is added to or deleted from table is refreshed
@@ -37,11 +38,9 @@ class HackerNewsTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
-        // Dispose of any resources that can be recreated.
     }
     
-    //MARK: Navigation
+    //MARK: Navigation, Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
         if (segue.identifier == HackerNewsConstants.segues.DetailHackerView) {
@@ -51,9 +50,14 @@ class HackerNewsTableViewController: UITableViewController {
             detailView.article = self.hackerArticleToPass
         }
     }
-
     
-    //MARK Load Hacker news on refresh
+    //MARK: Load Hacker news table update data
+
+    /**
+     Load Hacker news on refresh when user pulls down on table view
+     
+     - parameter sender:AnyObject object that refreshes table
+     */
     func loadHackerNews(sender:AnyObject) {
         HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
             if code == HackerNewsConstants.serverCodes.noConnection {
@@ -62,7 +66,6 @@ class HackerNewsTableViewController: UITableViewController {
             self.savedArticles = try! HackerCoreDataManager.getAllArticles()
             self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: HackerNewsConstants.tableCellIDs.HackerNewsCell)
             self.refreshControl!.endRefreshing()
-
         }
     }
 }
@@ -70,14 +73,16 @@ class HackerNewsTableViewController: UITableViewController {
 extension HackerNewsTableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "HackerNewsCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier(HackerNewsConstants.tableCellIDs.HackerNewsCell) as! HackerTableCell
+
         let row = indexPath.row
         let newHackerData = self.savedArticles[row]
         let title = newHackerData.storyTitle
         let timeInterval = newHackerData.timeSinceCreatedInterval
         let author = newHackerData.author
-        cell.textLabel?.text = title
-        cell.detailTextLabel?.text = author + " - " + timeInterval
+        cell.storyTitle!.text = title
+        cell.author!.text = author + " - " + timeInterval
+
         return cell
     }
     
@@ -94,6 +99,7 @@ extension HackerNewsTableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             let articleToDelete = self.savedArticles[indexPath.row]
+            //set coredata flag to deleted so won't be displayed again
             let _ = try? HackerCoreDataManager.setArticleToDeleted(articleToDelete)
             self.savedArticles.removeAtIndex(indexPath.row)
         }

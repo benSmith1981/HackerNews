@@ -21,7 +21,17 @@ class DetailHackerView: UIViewController, UIWebViewDelegate  {
         super.viewDidLoad()
         self.loadingView.hidden = false
         self.loadingWheel.startAnimating()
-        
+        passWebViewData()
+    }
+    
+    /**
+     Private function to pass webview data either as a URL to be loaded or an HTML body, also deals with no network connection
+     
+     - parameter: none
+     
+     - return: none
+     */
+    private func passWebViewData() {
         HackerNewsAPIService.sharedInstance.isConnectedToNetwork{ (success, message, code) in
             guard success else {
                 self.displayAlertMessage(message!, alertDescription: "")
@@ -43,10 +53,8 @@ class DetailHackerView: UIViewController, UIWebViewDelegate  {
                 }
             }
         }
-
-
     }
-    
+    //when webview is loaded stop the loading wheel and hide the view
     func webViewDidFinishLoad(webView: UIWebView) {
         self.loadingView.hidden = true
         self.loadingWheel.stopAnimating()

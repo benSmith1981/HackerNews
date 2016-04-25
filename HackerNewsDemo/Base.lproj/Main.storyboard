@@ -3,42 +3,55 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Hacker News-->
         <scene sceneID="2gz-aL-yFr">
             <objects>
-                <tableViewController id="VaZ-cR-F9m" userLabel="Hacker News" customClass="HackerNewsTableViewController" customModule="HackerNewsDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oqf-6U-59S">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="VaZ-cR-F9m" userLabel="Hacker News" customClass="HackerNewsTableViewController" customModule="HackerNewsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oqf-6U-59S">
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HackerNewsCell" editingAccessoryType="detailButton" textLabel="Amh-eX-1b6" detailTextLabel="M64-tw-fQl" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="I4J-C4-oUG">
-                                <rect key="frame" x="0.0" y="72" width="600" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="HackerNewsCell" editingAccessoryType="detailButton" rowHeight="78" id="I4J-C4-oUG" customClass="HackerTableCell" customModule="HackerNewsDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4J-C4-oUG" id="g3k-Gm-Wcb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="77"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Amh-eX-1b6">
-                                            <rect key="frame" x="15" y="20" width="32" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZD-M5-wTV">
+                                            <rect key="frame" x="8" y="4" width="584" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="qXJ-Li-Gz3"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M64-tw-fQl">
-                                            <rect key="frame" x="15" y="40" width="41" height="14"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-iP-Q4E">
+                                            <rect key="frame" x="8" y="47" width="584" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AZD-M5-wTV" firstAttribute="trailing" secondItem="g3k-Gm-Wcb" secondAttribute="trailingMargin" id="7xd-8m-4L3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ray-iP-Q4E" secondAttribute="bottom" constant="-4" id="Id6-UZ-vd8"/>
+                                        <constraint firstItem="AZD-M5-wTV" firstAttribute="top" secondItem="g3k-Gm-Wcb" secondAttribute="topMargin" constant="-4" id="SsE-LC-GFF"/>
+                                        <constraint firstItem="Ray-iP-Q4E" firstAttribute="trailing" secondItem="AZD-M5-wTV" secondAttribute="trailing" id="Y1U-Xd-Du0"/>
+                                        <constraint firstItem="Ray-iP-Q4E" firstAttribute="top" secondItem="AZD-M5-wTV" secondAttribute="bottom" constant="1" id="ZuZ-n6-1tG"/>
+                                        <constraint firstItem="Ray-iP-Q4E" firstAttribute="leading" secondItem="AZD-M5-wTV" secondAttribute="leading" id="sWo-ER-Fra"/>
+                                        <constraint firstItem="AZD-M5-wTV" firstAttribute="leading" secondItem="g3k-Gm-Wcb" secondAttribute="leadingMargin" id="zxX-YK-Ajt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="HackerNewsCell"/>
                                 <connections>
+                                    <outlet property="author" destination="Ray-iP-Q4E" id="yzW-fU-WhF"/>
+                                    <outlet property="storyTitle" destination="AZD-M5-wTV" id="IJA-8w-11a"/>
                                     <segue destination="URw-Fp-D1C" kind="show" identifier="DetailHackerView" id="BGY-od-Yzi"/>
                                 </connections>
                             </tableViewCell>
@@ -48,6 +61,7 @@
                             <outlet property="delegate" destination="VaZ-cR-F9m" id="2x7-uR-5TZ"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Hacker News" id="7H8-sS-xTv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd2-JT-1ku" userLabel="First Responder" sceneMemberID="firstResponder"/>

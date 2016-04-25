@@ -11,6 +11,13 @@ import Foundation
 typealias ServerMessage = String
 typealias ServerCode = String
 
+enum timeInSeconds: Int64 {
+    case twoDaysInSeconds = 172800
+    case oneDaysInSeconds = 86400
+    case twoHoursInSeconds = 7200
+    case weekInSeconds = 604800
+}
+
 struct HackerNewsConstants{
     
     struct jsonKeys{
@@ -50,12 +57,6 @@ struct HackerNewsConstants{
         static let ok200 = 200
         static let ok204 = 204
     }
-    
-    struct timeInSeconds{
-        static let twoDaysInSeconds = 172800
-        static let oneDaysInSeconds = 86400
-        static let twoHoursInSeconds = 7200
-    }
 
     struct nsuserdefaultKeys{
         static let deletedStoryIds = "deletedStoryIds"
@@ -69,4 +70,11 @@ struct HackerNewsConstants{
         static let HackerNewsCell = "HackerNewsCell"
     }
     
+    struct coreDataEntities {
+        static let HackerNewsModel = "HackerNewsModel"
+    }
+    
+    struct hackerNewsViewClassNames {
+        static let DetailHackerView = "HackerNewsDemo.DetailHackerView"
+    }
 }

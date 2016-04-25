@@ -15,8 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        HackerCoreDataManager.purgeTwoDayOldArticles()
+        // Load the feed then Purge articles older than a week on startup to clear coredata
+        HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
+            HackerCoreDataManager.purgeOldArticles(timeInSeconds.weekInSeconds)
+
+        }
         return true
     }
 

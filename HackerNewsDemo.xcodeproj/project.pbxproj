@@ -22,6 +22,9 @@
 		BEA334011CCE143C00F5755B /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */; };
 		BEA334021CCE145400F5755B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA333FD1CCE0B1700F5755B /* UIViewControllerExtensions.swift */; };
 		BEA334031CCE145700F5755B /* DetailHackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2983C21CC435CC001E1957 /* DetailHackerView.swift */; };
+		BEA334041CCEBB9200F5755B /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE878C1CCE268500C1E706 /* HackerCoreDataManager.swift */; };
+		BEA334071CCECBB100F5755B /* HackerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA334061CCECBB100F5755B /* HackerTableCell.swift */; };
+		BEA3340A1CCECE7F00F5755B /* HackerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA334061CCECBB100F5755B /* HackerTableCell.swift */; };
 		BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */; };
 		BEBF123A1CB1AB4B00EA9479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBF12381CB1AB4B00EA9479 /* Main.storyboard */; };
 		BEBF123C1CB1AB4B00EA9479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */; };
@@ -60,6 +63,7 @@
 		BE951DC01CB469F100EEB214 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		BEA333FD1CCE0B1700F5755B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		BEA334061CCECBB100F5755B /* HackerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HackerTableCell.swift; sourceTree = "<group>"; };
 		BEBF12311CB1AB4B00EA9479 /* HackerNewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBF12391CB1AB4B00EA9479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +135,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		BEA334051CCECB9900F5755B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BEA334061CCECBB100F5755B /* HackerTableCell.swift */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 		BEBF12281CB1AB4B00EA9479 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 		BEBF12331CB1AB4B00EA9479 /* HackerNewsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BEA334051CCECB9900F5755B /* TableViewCell */,
 				BE32A8AB1CBB01F80074230C /* Extensions */,
 				BE32A8AA1CBB01D30074230C /* Network */,
 				BE32A89B1CBA7C7E0074230C /* Coredata */,
@@ -327,6 +340,7 @@
 				BEA333FE1CCE0B1700F5755B /* UIViewControllerExtensions.swift in Sources */,
 				90DE878D1CCE268500C1E706 /* HackerCoreDataManager.swift in Sources */,
 				BE32A8A71CBAF4DC0074230C /* HackerManagedObject.swift in Sources */,
+				BEA334071CCECBB100F5755B /* HackerTableCell.swift in Sources */,
 				BE951DC41CB5B14100EEB214 /* NSDateExtension.swift in Sources */,
 				BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */,
 				BE2983C31CC435CC001E1957 /* DetailHackerView.swift in Sources */,
@@ -340,10 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2983BD1CC28869001E1957 /* Constants.swift in Sources */,
+				BEA334041CCEBB9200F5755B /* HackerCoreDataManager.swift in Sources */,
 				BEA333FC1CCD9EAD00F5755B /* HackerNewsVC.swift in Sources */,
 				BEA334021CCE145400F5755B /* UIViewControllerExtensions.swift in Sources */,
 				BEA333FB1CCD9E9600F5755B /* HackerManagedObject.swift in Sources */,
 				BEBF124A1CB1AB4B00EA9479 /* HackerNewsDemoTests.swift in Sources */,
+				BEA3340A1CCECE7F00F5755B /* HackerTableCell.swift in Sources */,
 				BEA334031CCE145700F5755B /* DetailHackerView.swift in Sources */,
 				BEBF126A1CB1AB6700EA9479 /* HackerNewsArticle.swift in Sources */,
 				BEA334011CCE143C00F5755B /* NSDateExtension.swift in Sources */,
@@ -489,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BenSmithInc.HackerNewsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -501,6 +518,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BenSmithInc.HackerNewsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

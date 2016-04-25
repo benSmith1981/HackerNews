@@ -30,6 +30,12 @@ extension NSDate {
     func secondsFrom(date:NSDate) -> Int{
         return NSCalendar.currentCalendar().components(NSCalendarUnit.Second, fromDate: date, toDate: self, options: NSCalendarOptions.WrapComponents).second
     }
+    
+    /**
+     Extension of NSDate to return a human readable string tell us how many days, months, years etc the passed date is away from the calling date
+     - parameters: date: NDate date you want to calcuate distance from
+     - return: Human readable string for date value
+     */
     func offsetFrom(date:NSDate) -> String {
         if yearsFrom(date)   > 0 { return "\(yearsFrom(date))y"   }
         if monthsFrom(date)  > 0 { return "\(monthsFrom(date))M"  }
