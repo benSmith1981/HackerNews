@@ -73,15 +73,16 @@ class HackerNewsTableViewController: UITableViewController {
 extension HackerNewsTableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "HackerNewsCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier(HackerNewsConstants.tableCellIDs.HackerNewsCell) as! HackerTableCell
+
         let row = indexPath.row
         let newHackerData = self.savedArticles[row]
         let title = newHackerData.storyTitle
         let timeInterval = newHackerData.timeSinceCreatedInterval
         let author = newHackerData.author
-        cell.textLabel?.text = title
-        cell.detailTextLabel?.textColor = UIColor.grayColor()
-        cell.detailTextLabel?.text = author + " - " + timeInterval
+        cell.storyTitle!.text = title
+        cell.author!.text = author + " - " + timeInterval
+
         return cell
     }
     
