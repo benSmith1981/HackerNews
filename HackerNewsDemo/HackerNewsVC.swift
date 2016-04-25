@@ -56,13 +56,11 @@ class HackerNewsTableViewController: UITableViewController {
     //MARK Load Hacker news on refresh
     func loadHackerNews(sender:AnyObject) {
         HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
-            if(success || code == HackerNewsConstants.serverCodes.noConnection){
-                if code == HackerNewsConstants.serverCodes.noConnection {
-                    self.displayAlertMessage(HackerNewsConstants.serverMessages.noConnection, alertDescription: "")
-                }
-                self.savedArticles = try! HackerCoreDataManager.getAllArticles()
-                self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: HackerNewsConstants.tableCellIDs.HackerNewsCell)
+            if code == HackerNewsConstants.serverCodes.noConnection {
+                self.displayAlertMessage(HackerNewsConstants.serverMessages.noConnection, alertDescription: "")
             }
+            self.savedArticles = try! HackerCoreDataManager.getAllArticles()
+            self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: HackerNewsConstants.tableCellIDs.HackerNewsCell)
             self.refreshControl!.endRefreshing()
 
         }
