@@ -38,7 +38,7 @@ class DetailHackerView: UIViewController, UIWebViewDelegate  {
                 return
             }
             self.newsWebView.delegate = self
-            if let storyUrlString =  self.article?.storyURL,
+            if let storyUrlString =  self.article!.storyURL,
                 let urlUnwrap = NSURL (string: storyUrlString){
                 let requestObj = NSURLRequest(URL: urlUnwrap);
                 self.newsWebView.loadRequest(requestObj)
