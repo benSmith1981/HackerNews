@@ -1,0 +1,760 @@
+{
+	"hits": [{
+		"created_at": "2016-04-03T14:33:48.000Z",
+		"title": null,
+		"url": null,
+		"author": "catnaroek",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Sometimes there is no valid state for a `std::move`d object, e.g. a `std::unique_ptr`.",
+		"num_comments": null,
+		"story_id": 11405406,
+		"story_title": "A static_cast is not always just a pointer adjustment",
+		"story_url": "https://blogs.msdn.microsoft.com/oldnewthing/20160224-00/?p=93081",
+		"parent_id": 11416114,
+		"created_at_i": 1459694028,
+		"_tags": ["comment", "author_catnaroek", "story_11405406"],
+		"objectID": "11416225",
+		"_highlightResult": {
+			"author": {
+				"value": "catnaroek",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Sometimes there \u003Cem\u003Eis\u003C/em\u003E no valid state for a `std::move`d object, e.g. a `std::unique_ptr`.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "A static_cast \u003Cem\u003Eis\u003C/em\u003E not always just a pointer adjustment",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_url": {
+				"value": "https://blogs.msdn.microsoft.com/oldnewthing/20160224-00/?p=93081",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:33:45.000Z",
+		"title": null,
+		"url": null,
+		"author": "kayoone",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Does it matter ? It is not about who is the best in the world, just who is popular. He knows his stuff and has helped thousands of people with mindblowing accuracy and consistency for almost a decade, which in my book is as valuable than a genius programmer writing great software.\nSuper complex software has been written in C# and Java, not sure why you are trying to say that it is not challenging.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416132,
+		"created_at_i": 1459694025,
+		"_tags": ["comment", "author_kayoone", "story_11415705"],
+		"objectID": "11416224",
+		"_highlightResult": {
+			"author": {
+				"value": "kayoone",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Does it matter ? It \u003Cem\u003Eis\u003C/em\u003E not about who \u003Cem\u003Eis\u003C/em\u003E the best in the world, just who \u003Cem\u003Eis\u003C/em\u003E popular. He knows his stuff and has helped thousands of people with mindblowing accuracy and consistency for almost a decade, which in my book \u003Cem\u003Eis\u003C/em\u003E as valuable than a genius programmer writing great software.\nSuper complex software has been written in C# and Java, not sure why you are trying to say that it \u003Cem\u003Eis\u003C/em\u003E not challenging.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:33:13.000Z",
+		"title": null,
+		"url": null,
+		"author": "mcv",
+		"points": null,
+		"story_text": null,
+		"comment_text": "If you were to ask me for a regex, I\u0026#x27;d say \u0026#x2F;.+@.+\u0026#x2F;.\u003Cp\u003EThat\u0026#x27;s the easiest and most accurate way to do it by regex. Sure, some invalid addresses may still get accepted, but that is unavoidable. Even the most thorough validation[0] is going to accept nonexistent addresses.\u003Cp\u003E[0] Except those that validate by sending a mail to it. Sending an email is the only way to be sure.",
+		"num_comments": null,
+		"story_id": 11414749,
+		"story_title": "It's Impossible to Validate an Email Address",
+		"story_url": "https://elliot.land/validating-an-email-address",
+		"parent_id": 11414749,
+		"created_at_i": 1459693993,
+		"_tags": ["comment", "author_mcv", "story_11414749"],
+		"objectID": "11416221",
+		"_highlightResult": {
+			"author": {
+				"value": "mcv",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "If you were to ask me for a regex, I'd say /.+@.+/.\u003Cp\u003EThat's the easiest and most accurate way to do it by regex. Sure, some invalid addresses may still get accepted, but that \u003Cem\u003Eis\u003C/em\u003E unavoidable. Even the most thorough validation[0] \u003Cem\u003Eis\u003C/em\u003E going to accept nonexistent addresses.\u003Cp\u003E[0] Except those that validate by sending a mail to it. Sending an email \u003Cem\u003Eis\u003C/em\u003E the only way to be sure.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "It's Impossible to Validate an Email Address",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "https://elliot.land/validating-an-email-address",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:32:55.000Z",
+		"title": null,
+		"url": null,
+		"author": "coldtea",
+		"points": null,
+		"story_text": null,
+		"comment_text": "With a regex\u0026#x2F;parser maybe -- but it\u0026#x27;s very easy to require \u0026quot;activation\u0026quot; from said email address as a verification.",
+		"num_comments": null,
+		"story_id": 11414749,
+		"story_title": "It's Impossible to Validate an Email Address",
+		"story_url": "https://elliot.land/validating-an-email-address",
+		"parent_id": 11414749,
+		"created_at_i": 1459693975,
+		"_tags": ["comment", "author_coldtea", "story_11414749"],
+		"objectID": "11416220",
+		"_highlightResult": {
+			"author": {
+				"value": "coldtea",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "With a regex/parser maybe -- but \u003Cem\u003Eit's\u003C/em\u003E very easy to require \u0026quot;activation\u0026quot; from said email address as a verification.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "\u003Cem\u003EIt's\u003C/em\u003E Impossible to Validate an Email Address",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_url": {
+				"value": "https://elliot.land/validating-an-email-address",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:32:28.000Z",
+		"title": null,
+		"url": null,
+		"author": "jonskeet",
+		"points": null,
+		"story_text": null,
+		"comment_text": "\u0026gt; The biggest issue with idolizing people this much in my opinion is that it puts a huge divide between you and that idol.\u003Cp\u003EIf it\u0026#x27;s any help, I\u0026#x27;d be happy to give a huge list of bugs I\u0026#x27;ve caused due to inexperience and incompetence.\u003Cp\u003EI\u0026#x27;m not going to pretend I don\u0026#x27;t enjoy the micro-celebrity status SO has given me, but I\u0026#x27;d be happy to help correct any impression that there\u0026#x27;s a huge gulf between me and any \u0026quot;regular\u0026quot; programmer. Maybe a gulf in \u0026quot;time spent answering questions on SO\u0026quot; but not some massive intellectual divide.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416065,
+		"created_at_i": 1459693948,
+		"_tags": ["comment", "author_jonskeet", "story_11415705"],
+		"objectID": "11416218",
+		"_highlightResult": {
+			"author": {
+				"value": "jonskeet",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "\u0026gt; The biggest \u003Cem\u003Eiss\u003C/em\u003Eue with idolizing people this much in my opinion is that it puts a huge divide between you and that idol.\u003Cp\u003EIf it's any help, I'd be happy to give a huge list of bugs I've caused due to inexperience and incompetence.\u003Cp\u003EI'm not going to pretend I don't enjoy the micro-celebrity status SO has given me, but I'd be happy to help correct any impression that there's a huge gulf between me and any \u0026quot;regular\u0026quot; programmer. Maybe a gulf in \u0026quot;time spent answering questions on SO\u0026quot; but not some massive intellectual divide.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:32:16.000Z",
+		"title": null,
+		"url": null,
+		"author": "Panoramix",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Plenty of people are honest every day. It\u0026#x27;s possible unless you work in a toxic environment.",
+		"num_comments": null,
+		"story_id": 11411372,
+		"story_title": "Unintuitive Things I’ve Learned about Management",
+		"story_url": "https://medium.com/the-year-of-the-looking-glass/unintuitive-things-i-ve-learned-about-management-f2c42d68604b",
+		"parent_id": 11414662,
+		"created_at_i": 1459693936,
+		"_tags": ["comment", "author_Panoramix", "story_11411372"],
+		"objectID": "11416215",
+		"_highlightResult": {
+			"author": {
+				"value": "Panoramix",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Plenty of people are honest every day. \u003Cem\u003EIt's\u003C/em\u003E possible unless you work in a toxic environment.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Unintuitive Things I’ve Learned about Management",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "https://medium.com/the-year-of-the-looking-glass/unintuitive-things-i-ve-learned-about-management-f2c42d68604b",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:31:57.000Z",
+		"title": null,
+		"url": null,
+		"author": "nick2",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Location: London\u003Cp\u003ERemote: YES\u003Cp\u003EWilling to relocate: EU\u003Cp\u003ETechnologies: iOS, swift, objective-C\u003Cp\u003ERésumé\u0026#x2F;CV: \u003Ca href=\"http:\u0026#x2F;\u0026#x2F;bit.ly\u0026#x2F;1uh9Ori\" rel=\"nofollow\"\u003Ehttp:\u0026#x2F;\u0026#x2F;bit.ly\u0026#x2F;1uh9Ori\u003C/a\u003E\u003Cp\u003EEmail: nickiosdev+hn@gmail.com",
+		"num_comments": null,
+		"story_id": 11405241,
+		"story_title": "Ask HN: Who wants to be hired? (April 2016)",
+		"story_url": null,
+		"parent_id": 11405241,
+		"created_at_i": 1459693917,
+		"_tags": ["comment", "author_nick2", "story_11405241"],
+		"objectID": "11416214",
+		"_highlightResult": {
+			"author": {
+				"value": "nick2",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Location: London\u003Cp\u003ERemote: YES\u003Cp\u003EWilling to relocate: EU\u003Cp\u003ETechnologies: \u003Cem\u003EiOS\u003C/em\u003E, swift, objective-C\u003Cp\u003ERésumé/CV: \u003Ca href=\"http://bit.ly/1uh9Ori\" rel=\"nofollow\"\u003Ehttp://bit.ly/1uh9Ori\u003C/a\u003E\u003Cp\u003EEmail: nickiosdev+hn@gmail.com",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Ask HN: Who wants to be hired? (April 2016)",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:31:43.000Z",
+		"title": "Linux-insides: The initcall mechanism",
+		"url": "https://github.com/0xAX/linux-insides/blob/master/Concepts/initcall.md",
+		"author": "0xAX",
+		"points": 2,
+		"story_text": null,
+		"comment_text": null,
+		"num_comments": 0,
+		"story_id": null,
+		"story_title": null,
+		"story_url": null,
+		"parent_id": null,
+		"created_at_i": 1459693903,
+		"_tags": ["story", "author_0xAX", "story_11416212"],
+		"objectID": "11416212",
+		"_highlightResult": {
+			"title": {
+				"value": "Linux-\u003Cem\u003Eins\u003C/em\u003Eides: The initcall mechanism",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"url": {
+				"value": "https://github.com/0xAX/linux-\u003Cem\u003Eins\u003C/em\u003Eides/blob/master/Concepts/initcall.md",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"author": {
+				"value": "0xAX",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:31:41.000Z",
+		"title": null,
+		"url": null,
+		"author": "MichaelBurge",
+		"points": null,
+		"story_text": null,
+		"comment_text": "\u0026gt; Corporations are created by the state; they do not have rights. The state can put additional requirements on their offer of limited liability. People have rights against self-incrimination.\u003Cp\u003EIs that something you know to be true, or are you just imagining a world where it\u0026#x27;s true and firmly declaring it into existence?\u003Cp\u003EAs best as I can tell[1], this very issue is actually split in circuit court and hasn\u0026#x27;t gone to the SCOTUS yet. Corporations already have First Amendment rights[2].\u003Cp\u003EOf course, none of this matters for the case in question, which uses British law. I can\u0026#x27;t imagine the self-incrimination principle is very strong in Britain, since the American founders put it in the Constitution as a response to British abuses.\u003Cp\u003E[1] \u003Ca href=\"http:\u0026#x2F;\u0026#x2F;www.law360.com\u0026#x2F;articles\u0026#x2F;634828\u0026#x2F;high-court-may-take-on-corporate-5th-amendment-privilege\" rel=\"nofollow\"\u003Ehttp:\u0026#x2F;\u0026#x2F;www.law360.com\u0026#x2F;articles\u0026#x2F;634828\u0026#x2F;high-court-may-take-on...\u003C/a\u003E\n[2] \u003Ca href=\"https:\u0026#x2F;\u0026#x2F;en.wikipedia.org\u0026#x2F;wiki\u0026#x2F;Citizens_United_v._FEC\" rel=\"nofollow\"\u003Ehttps:\u0026#x2F;\u0026#x2F;en.wikipedia.org\u0026#x2F;wiki\u0026#x2F;Citizens_United_v._FEC\u003C/a\u003E",
+		"num_comments": null,
+		"story_id": 11411833,
+		"story_title": "British authorities demand encryption keys in case with “huge implications”",
+		"story_url": "https://theintercept.com/2016/04/01/british-authorities-demand-encryption-keys-in-closely-watched-case/",
+		"parent_id": 11415228,
+		"created_at_i": 1459693901,
+		"_tags": ["comment", "author_MichaelBurge", "story_11411833"],
+		"objectID": "11416211",
+		"_highlightResult": {
+			"author": {
+				"value": "MichaelBurge",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "\u0026gt; Corporations are created by the state; they do not have rights. The state can put additional requirements on their offer of limited liability. People have rights against self-incrimination.\u003Cp\u003E\u003Cem\u003EIs\u003C/em\u003E that something you know to be true, or are you just imagining a world where it's true and firmly declaring it into existence?\u003Cp\u003EAs best as I can tell[1], this very \u003Cem\u003Eis\u003C/em\u003Esue \u003Cem\u003Eis\u003C/em\u003E actually split in circuit court and hasn't gone to the SCOTUS yet. Corporations already have First Amendment rights[2].\u003Cp\u003EOf course, none of this matters for the case in question, which uses British law. I can't imagine the self-incrimination principle \u003Cem\u003Eis\u003C/em\u003E very strong in Britain, since the American founders put it in the Constitution as a response to British abuses.\u003Cp\u003E[1] \u003Ca href=\"http://www.law360.com/articles/634828/high-court-may-take-on-corporate-5th-amendment-privilege\" rel=\"nofollow\"\u003Ehttp://www.law360.com/articles/634828/high-court-may-take-on...\u003C/a\u003E\n[2] \u003Ca href=\"https://en.wikipedia.org/wiki/Citizens_United_v._FEC\" rel=\"nofollow\"\u003Ehttps://en.wikipedia.org/wiki/Citizens_United_v._FEC\u003C/a\u003E",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "British authorities demand encryption keys in case with “huge implications”",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "https://theintercept.com/2016/04/01/british-authorities-demand-encryption-keys-in-closely-watched-case/",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:31:37.000Z",
+		"title": null,
+		"url": null,
+		"author": "astazangasta",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Exactly this. Why would humans have a stress response that generates somatic mutation? It makes no sense. Also strategies that apply to organisms with large effective population sizes that expand clonally (bacteria) won\u0026#x27;t apply to humans. Also also, while mutator phenotypes might be useful under stress, once the stress is gone they quickly become disadvantageous and disappear. Deleterious mutation load has to go somewhere: the usual avenue is death in asexual organisms.",
+		"num_comments": null,
+		"story_id": 11410749,
+		"story_title": "Does Stress Speed Up Evolution?",
+		"story_url": "http://nautil.us/issue/34/adaptation/does-stress-speed-up-evolution",
+		"parent_id": 11415804,
+		"created_at_i": 1459693897,
+		"_tags": ["comment", "author_astazangasta", "story_11410749"],
+		"objectID": "11416210",
+		"_highlightResult": {
+			"author": {
+				"value": "astazangasta",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Exactly this. Why would humans have a stress response that generates somatic mutation? It makes no sense. Also strategies that apply to organisms with large effective population sizes that expand clonally (bacteria) won't apply to humans. Also also, while mutator phenotypes might be useful under stress, once the stress \u003Cem\u003Eis\u003C/em\u003E gone they quickly become disadvantageous and disappear. Deleterious mutation load has to go somewhere: the usual avenue \u003Cem\u003Eis\u003C/em\u003E death in asexual organisms.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Does Stress Speed Up Evolution?",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://nautil.us/\u003Cem\u003Eis\u003C/em\u003Esue/34/adaptation/does-stress-speed-up-evolution",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:30:45.000Z",
+		"title": null,
+		"url": null,
+		"author": "ortusdux",
+		"points": null,
+		"story_text": null,
+		"comment_text": "I went a step further and bought a .com that I setup with a catchall email forwarder.   Most signups get a custom email at that domain.  I still get Russian bride emails sent to oilchangeplace@",
+		"num_comments": null,
+		"story_id": 11414749,
+		"story_title": "It's Impossible to Validate an Email Address",
+		"story_url": "https://elliot.land/validating-an-email-address",
+		"parent_id": 11414841,
+		"created_at_i": 1459693845,
+		"_tags": ["comment", "author_ortusdux", "story_11414749"],
+		"objectID": "11416207",
+		"_highlightResult": {
+			"author": {
+				"value": "ortusdux",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "I went a step further and bought a .com that I setup with a catchall email forwarder.   \u003Cem\u003EMos\u003C/em\u003Et signups get a custom email at that domain.  I still get Russian bride emails sent to oilchangeplace@",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "It's Impossible to Validate an Email Address",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "https://elliot.land/validating-an-email-address",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:30:24.000Z",
+		"title": null,
+		"url": null,
+		"author": "bradleyjg",
+		"points": null,
+		"story_text": null,
+		"comment_text": "My biggest concern is that along with the nitrogen and phosphate runoff come pesticides and other less savory compounds that then bio-accumulate in the farmed shellfish.",
+		"num_comments": null,
+		"story_id": 11410650,
+		"story_title": "How an Army of Ocean Farmers Are Starting an Economic Revolution",
+		"story_url": "https://medium.com/invironment/an-army-of-ocean-farmers-on-the-frontlines-of-the-blue-green-economic-revolution-d5ae171285a3",
+		"parent_id": 11415505,
+		"created_at_i": 1459693824,
+		"_tags": ["comment", "author_bradleyjg", "story_11410650"],
+		"objectID": "11416206",
+		"_highlightResult": {
+			"author": {
+				"value": "bradleyjg",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "My biggest concern \u003Cem\u003Eis\u003C/em\u003E that along with the nitrogen and phosphate runoff come pesticides and other less savory compounds that then bio-accumulate in the farmed shellfish.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "How an Army of Ocean Farmers Are Starting an Economic Revolution",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "https://medium.com/invironment/an-army-of-ocean-farmers-on-the-frontlines-of-the-blue-green-economic-revolution-d5ae171285a3",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:30:24.000Z",
+		"title": null,
+		"url": null,
+		"author": "bliti",
+		"points": null,
+		"story_text": null,
+		"comment_text": "My brother in law works for P\u0026amp;G in their tampon department as a researcher. He is a chemical engineer. He tells me most advances come from small startups  outside the US and and they are usually quietly acquired. There seems to be a lot of red tape to get through before you can even do something small in that industry. It\u0026#x27;s not like you can throw some code and have a tampon 2.0 in a weekend. Tampons are a really complex thing. He explained to me how different types of fabrics and the way they are used can be potentially fatal ti some women. Thats why the research for the common tampon is ongoing.",
+		"num_comments": null,
+		"story_id": 11411575,
+		"story_title": "The Tampon of the Future",
+		"story_url": "http://www.nytimes.com/2016/04/03/opinion/sunday/the-tampon-of-the-future.html",
+		"parent_id": 11415216,
+		"created_at_i": 1459693824,
+		"_tags": ["comment", "author_bliti", "story_11411575"],
+		"objectID": "11416205",
+		"_highlightResult": {
+			"author": {
+				"value": "bliti",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "My brother in law works for P\u0026amp;G in their tampon department as a researcher. He \u003Cem\u003Eis\u003C/em\u003E a chemical engineer. He tells me most advances come from small startups  outside the US and and they are usually quietly acquired. There seems to be a lot of red tape to get through before you can even do something small in that industry. It's not like you can throw some code and have a tampon 2.0 in a weekend. Tampons are a really complex thing. He explained to me how different types of fabrics and the way they are used can be potentially fatal ti some women. Thats why the research for the common tampon \u003Cem\u003Eis\u003C/em\u003E ongoing.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "The Tampon of the Future",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.nytimes.com/2016/04/03/opinion/sunday/the-tampon-of-the-future.html",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:29:49.000Z",
+		"title": null,
+		"url": null,
+		"author": "coldtea",
+		"points": null,
+		"story_text": null,
+		"comment_text": "Books usually lose you money.\u003Cp\u003EProgramming books doubly so, especially if your hour rate is that of a Google programmer, it\u0026#x27;s hardly worth spending half a year or even a year for the measly returns.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416117,
+		"created_at_i": 1459693789,
+		"_tags": ["comment", "author_coldtea", "story_11415705"],
+		"objectID": "11416204",
+		"_highlightResult": {
+			"author": {
+				"value": "coldtea",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "Books usually lose you money.\u003Cp\u003EProgramming books doubly so, especially if your hour rate \u003Cem\u003Eis\u003C/em\u003E that of a Google programmer, it's hardly worth spending half a year or even a year for the measly returns.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:29:43.000Z",
+		"title": null,
+		"url": null,
+		"author": "s_dev",
+		"points": null,
+		"story_text": null,
+		"comment_text": "This is my favourite Jon Skeet Answer: \u003Ca href=\"http:\u0026#x2F;\u0026#x2F;stackoverflow.com\u0026#x2F;questions\u0026#x2F;6841333\u0026#x2F;why-is-subtracting-these-two-times-in-1927-giving-a-strange-result\" rel=\"nofollow\"\u003Ehttp:\u0026#x2F;\u0026#x2F;stackoverflow.com\u0026#x2F;questions\u0026#x2F;6841333\u0026#x2F;why-is-subtractin...\u003C/a\u003E\u003Cp\u003EIt\u0026#x27;s not because he gives a wonderfully description of the problem and solution that makes you fully understand what happened. What makes it incredible It\u0026#x27;s that he solved it so comprehensively in 15 minutes from the time the poster asked the question. Most high calibre devs would be still wrapping their head around the problem after 15 minutes.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11415705,
+		"created_at_i": 1459693783,
+		"_tags": ["comment", "author_s_dev", "story_11415705"],
+		"objectID": "11416202",
+		"_highlightResult": {
+			"author": {
+				"value": "s_dev",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "This \u003Cem\u003Eis\u003C/em\u003E my favourite Jon Skeet Answer: \u003Ca href=\"http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result\" rel=\"nofollow\"\u003Ehttp://stackoverflow.com/questions/6841333/why-\u003Cem\u003Eis\u003C/em\u003E-subtractin...\u003C/a\u003E\u003Cp\u003EIt's not because he gives a wonderfully description of the problem and solution that makes you fully understand what happened. What makes it incredible It's that he solved it so comprehensively in 15 minutes from the time the poster asked the question. Most high calibre devs would be still wrapping their head around the problem after 15 minutes.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:29:00.000Z",
+		"title": null,
+		"url": null,
+		"author": "pharke",
+		"points": null,
+		"story_text": null,
+		"comment_text": "How is this not patently false?  If you take someone living below the poverty line, earning minimum wage, renting their meager apartment, eating highly processed carbs and pseudo-meat, in debt to their bank and payday loan sharks, and under constant threat of homelessness brought on by unexpected illness or economic downturn, how is this situation in any way superior to a king or queen as they existed before \u0026quot;our generation\u0026quot; which I take to mean the modern era rather than literally our generation.\u003Cp\u003EA monarch of the past would have obviously better access to food, more of it, higher quality, they might have slightly less variety available (dependent on the era and location) but they certainly weren\u0026#x27;t eating the prepackaged garbage that passes for low budget food today.\u003Cp\u003EBy law they owned not only their own vast properties, houses, palaces, etc. but also that of all of their subjects and nobility allowing them to give and take as they wished from anyone under their dominion.  Even after reforms almost all royal families were still left with vast holdings that produce more than enough wealth to live absurdly opulent lifestyles.  There have been many cases of indebted rulers but that is debt in the sense of illiquidity, they were still asset rich and able to melt the plate down to pay off the debts, so to speak.\u003Cp\u003EThis notion that everyone was universally worse off in the past and therefore even the lowest of the modern low are somehow better off in their current state and should be thankful for it is the crudest of fallacies.  The trite example of modern healthcare being a shining example of why it\u0026#x27;s better to be poor today than wealthy 200 years ago is equally absurd considering that such care is often avoided by the poorest due to its cost right up until it\u0026#x27;s too late to do anything about it.  You wind up with a situation where a person\u0026#x27;s only choice is to hope not to get sick since they can\u0026#x27;t afford the treatment or the missed work either of which could put them even further under water or on the street.",
+		"num_comments": null,
+		"story_id": 11412832,
+		"story_title": "Will minimum wage hikes lead to a huge boost in automation? Only if we're lucky",
+		"story_url": "http://www.vox.com/2016/4/2/11348148/minimum-wage-robots",
+		"parent_id": 11415950,
+		"created_at_i": 1459693740,
+		"_tags": ["comment", "author_pharke", "story_11412832"],
+		"objectID": "11416200",
+		"_highlightResult": {
+			"author": {
+				"value": "pharke",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "How \u003Cem\u003Eis\u003C/em\u003E this not patently false?  If you take someone living below the poverty line, earning minimum wage, renting their meager apartment, eating highly processed carbs and pseudo-meat, in debt to their bank and payday loan sharks, and under constant threat of homelessness brought on by unexpected illness or economic downturn, how \u003Cem\u003Eis\u003C/em\u003E this situation in any way superior to a king or queen as they existed before \u0026quot;our generation\u0026quot; which I take to mean the modern era rather than literally our generation.\u003Cp\u003EA monarch of the past would have obviously better access to food, more of it, higher quality, they might have slightly less variety available (dependent on the era and location) but they certainly weren't eating the prepackaged garbage that passes for low budget food today.\u003Cp\u003EBy law they owned not only their own vast properties, houses, palaces, etc. but also that of all of their subjects and nobility allowing them to give and take as they wished from anyone under their dominion.  Even after reforms almost all royal families were still left with vast holdings that produce more than enough wealth to live absurdly opulent lifestyles.  There have been many cases of indebted rulers but that \u003Cem\u003Eis\u003C/em\u003E debt in the sense of illiquidity, they were still asset rich and able to melt the plate down to pay off the debts, so to speak.\u003Cp\u003EThis notion that everyone was universally worse off in the past and therefore even the lowest of the modern low are somehow better off in their current state and should be thankful for it \u003Cem\u003Eis\u003C/em\u003E the crudest of fallacies.  The trite example of modern healthcare being a shining example of why it's better to be poor today than wealthy 200 years ago \u003Cem\u003Eis\u003C/em\u003E equally absurd considering that such care \u003Cem\u003Eis\u003C/em\u003E often avoided by the poorest due to its cost right up until it's too late to do anything about it.  You wind up with a situation where a person's only choice \u003Cem\u003Eis\u003C/em\u003E to hope not to get sick since they can't afford the treatment or the missed work either of which could put them even further under water or on the street.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Will minimum wage hikes lead to a huge boost in automation? Only if we're lucky",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.vox.com/2016/4/2/11348148/minimum-wage-robots",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:28:54.000Z",
+		"title": null,
+		"url": null,
+		"author": "jonskeet",
+		"points": null,
+		"story_text": null,
+		"comment_text": "They\u0026#x27;re not meaningful at all. Hopefully relatively few people \u003Ci\u003Ereally\u003C/i\u003E think I\u0026#x27;m one of the \u0026quot;top 15 living programmers\u0026quot; or anything like that.\u003Cp\u003EI\u0026#x27;m good enough to make a living, and good enough to help people on SO. One of the nice things about programming is that what you find interesting, I might not and vice versa - hopefully there will always be enough people who find a variety of topics interesting to hope those who have problems in those topics. But yes, considering rep as a proxy metric for programming awesomeness would be a mistake IMO.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416132,
+		"created_at_i": 1459693734,
+		"_tags": ["comment", "author_jonskeet", "story_11415705"],
+		"objectID": "11416199",
+		"_highlightResult": {
+			"author": {
+				"value": "jonskeet",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "They're not meaningful at all. Hopefully relatively few people \u003Ci\u003Ereally\u003C/i\u003E think I'm one of the \u0026quot;top 15 living programmers\u0026quot; or anything like that.\u003Cp\u003EI'm good enough to make a living, and good enough to help people on SO. One of the nice things about programming \u003Cem\u003Eis\u003C/em\u003E that what you find interesting, I might not and vice versa - hopefully there will always be enough people who find a variety of topics interesting to hope those who have problems in those topics. But yes, considering rep as a proxy metric for programming awesomeness would be a mistake IMO.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:28:05.000Z",
+		"title": null,
+		"url": null,
+		"author": "coldtea",
+		"points": null,
+		"story_text": null,
+		"comment_text": "\u0026gt;\u003Ci\u003EIf Visual Basic was the language with the most number of beginners and programmers, and I had the best answers to Visual Basic questions, I could be Chuck Norris instead.\nBut I don\u0026#x27;t find Visual Basic challenging or interesting. Neither C# or Java for that matter.\u003C/i\u003E\u003Cp\u003EThat\u0026#x27;s neither here nor there. He does, and he got to be Chuck Norris.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416132,
+		"created_at_i": 1459693685,
+		"_tags": ["comment", "author_coldtea", "story_11415705"],
+		"objectID": "11416198",
+		"_highlightResult": {
+			"author": {
+				"value": "coldtea",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "\u0026gt;\u003Ci\u003EIf Visual Basic was the language with the most number of beginners and programmers, and I had the best answers to Visual Basic questions, I could be Chuck Norris \u003Cem\u003Eins\u003C/em\u003Etead.\nBut I don't find Visual Basic challenging or interesting. Neither C# or Java for that matter.\u003C/i\u003E\u003Cp\u003EThat's neither here nor there. He does, and he got to be Chuck Norris.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:27:35.000Z",
+		"title": null,
+		"url": null,
+		"author": "codingdave",
+		"points": null,
+		"story_text": null,
+		"comment_text": "This is a site about technology, not politics. I downvoted the original comment because it is not a good match for the topic or tone of Hacker News. I downvoted your comment because your tone is even more aggressive and antagonizing, and again, not on topic.",
+		"num_comments": null,
+		"story_id": 11415705,
+		"story_title": "Jon Skeet: The 'Chuck Norris' of Programming",
+		"story_url": "http://www.bbc.com/news/uk-england-34596634",
+		"parent_id": 11416163,
+		"created_at_i": 1459693655,
+		"_tags": ["comment", "author_codingdave", "story_11415705"],
+		"objectID": "11416197",
+		"_highlightResult": {
+			"author": {
+				"value": "codingdave",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "This \u003Cem\u003Eis\u003C/em\u003E a site about technology, not politics. I downvoted the original comment because it \u003Cem\u003Eis\u003C/em\u003E not a good match for the topic or tone of Hacker News. I downvoted your comment because your tone \u003Cem\u003Eis\u003C/em\u003E even more aggressive and antagonizing, and again, not on topic.",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Jon Skeet: The 'Chuck Norris' of Programming",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://www.bbc.com/news/uk-england-34596634",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}, {
+		"created_at": "2016-04-03T14:25:45.000Z",
+		"title": null,
+		"url": null,
+		"author": "api",
+		"points": null,
+		"story_text": null,
+		"comment_text": "We are possibly one such emergent behavior in an agent based system, as are bees and fish and trees and whales. So yes. :)",
+		"num_comments": null,
+		"story_id": 11411402,
+		"story_title": "Rage Against the Finite-State Machines",
+		"story_url": "http://learnyousomeerlang.com/finite-state-machines",
+		"parent_id": 11415813,
+		"created_at_i": 1459693545,
+		"_tags": ["comment", "author_api", "story_11411402"],
+		"objectID": "11416194",
+		"_highlightResult": {
+			"author": {
+				"value": "api",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"comment_text": {
+				"value": "We are \u003Cem\u003Epos\u003C/em\u003Esibly one such emergent behavior in an agent based system, as are bees and fish and trees and whales. So yes. :)",
+				"matchLevel": "full",
+				"matchedWords": ["ios"]
+			},
+			"story_title": {
+				"value": "Rage Against the Finite-State Machines",
+				"matchLevel": "none",
+				"matchedWords": []
+			},
+			"story_url": {
+				"value": "http://learnyousomeerlang.com/finite-state-machines",
+				"matchLevel": "none",
+				"matchedWords": []
+			}
+		}
+	}],
+	"nbHits": 100579,
+	"page": 0,
+	"nbPages": 50,
+	"hitsPerPage": 20,
+	"processingTimeMS": 50,
+	"query": "ios",
+	"params": "advancedSyntax=true\u0026analytics=false\u0026query=ios"
+}

@@ -35,13 +35,20 @@ class HackerNewsDemoTests: XCTestCase {
     
     func testUserRequestReturnsData() {
         let expectation = expectationWithDescription("Waiting to respond")
-        HackerNewsData.sharedInstance.loadFeed() { (flag) in
-            XCTAssert(HackerNewsData.sharedInstance.newHackerData != nil)
+        HackerNewsAPIService.sharedInstance.loadFeed() { (success, message, code) in
+            XCTAssert(success, message!)
             expectation.fulfill()
+            
         }
         
         waitForExpectationsWithTimeout(5.0, handler:nil)
     }
     
+    func testGetAll2DayOldArticles() {
+        let articles = try? HackerCoreDataManager.getAll2DayOldArticles()
+        for article in articles! {
+            print(NSDate().daysFrom(article.createdTimeStampDate))
+        }
+    }
     
 }
