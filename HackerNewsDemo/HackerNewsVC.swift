@@ -12,7 +12,7 @@ class HackerNewsTableViewController: UITableViewController {
 
     var hackerArticleToPass: HackerNewsArticle?
 
-    //MARK: Proprietes
+    //MARK: Properties
     var savedArticles = [HackerManagedObject]() {
         didSet {
             dispatch_async(dispatch_get_main_queue()) {
@@ -28,7 +28,6 @@ class HackerNewsTableViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl!.addTarget(self, action: #selector(loadHackerNews(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(self.refreshControl!)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,8 +62,9 @@ class HackerNewsTableViewController: UITableViewController {
                 self.savedArticles = try! HackerCoreDataManager.getAllArticles()
                 self.tableView.reloadData()
                 self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
-                self.refreshControl!.endRefreshing()
             }
+            self.refreshControl!.endRefreshing()
+
         }
     }
 }
@@ -78,9 +78,8 @@ extension HackerNewsTableViewController {
         let title = newHackerData.storyTitle
         let timeInterval = newHackerData.timeSinceCreatedInterval
         let author = newHackerData.author
-        let timeStamp = newHackerData.createdTimeStampDate
         cell.textLabel?.text = title
-        cell.detailTextLabel?.text = author + " - " + timeInterval + " - " + timeStamp
+        cell.detailTextLabel?.text = author + " - " + timeInterval
         return cell
     }
     
@@ -96,9 +95,12 @@ extension HackerNewsTableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            let _ = try? HackerCoreDataManager.deleteArticle(self.savedArticles[indexPath.row])
+            let articleToDelete = self.savedArticles[indexPath.row]
+            let _ = try? HackerCoreDataManager.setArticleToDeleted(articleToDelete)
             self.savedArticles.removeAtIndex(indexPath.row)
             self.tableView.reloadData()
+            
+
         }
     }
 }

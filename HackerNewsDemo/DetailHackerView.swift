@@ -21,25 +21,18 @@ class DetailHackerView: UIViewController, UIWebViewDelegate  {
         super.viewDidLoad()
         self.loadingView.hidden = false
         self.loadingWheel.startAnimating()
-        
-        self.newsWebView.frame = self.view.bounds
-        self.newsWebView.scalesPageToFit = true
-
-        self.loadingView.frame = self.view.bounds
 
         newsWebView.delegate = self
         if let storyUrlString =  article!.storyURL,
             let urlUnwrap = NSURL (string: storyUrlString){
                 let requestObj = NSURLRequest(URL: urlUnwrap);
                 newsWebView.loadRequest(requestObj)
-        } else {
-            let myHTML = "<html><head><title>" + (article?.storyTitle)! + "</title></head><body><h1>" + (article?.storyText)! + "</h1></body></html>";
+        } else { //no URL then try reconstruct the story into an html format
+//            let myHTML = "<html><body><h1> " + (article?.storyTitle)! + "</h1><h2>" + (article?.storyText)! + "</h2></body></html>";
+            let myHTML = "<html><body><h1>Title</h1><h2>" + (article?.storyText)! + "</h2></body></html>";
+
             self.newsWebView.loadHTMLString(myHTML, baseURL: nil)
         }
-    }
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {

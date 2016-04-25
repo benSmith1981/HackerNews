@@ -8,32 +8,24 @@
 
 import Foundation
 
-struct jsonKeys{
-    static let  createdAtKey = "created_at"
-    static let  author = "author"
-    static let  comment_text = "comment_text"
-    static let  storyID = "story_id"
-    static let  storyTitle = "story_title"
-    static let  storyText = "story_text"
-
-    static let  title = "title"
-    static let  tags = "_tags"
-    static let  storyURL = "story_url"
-    static let  url = "url"
-    static let  highlightResult = "_highlightResult"
-}
-
 struct HackerNewsArticle {
-    var createdTimeStampDate: String?
+    var createdTimeStampDate: NSDate?
+    var createdTimeSeconds: Int?
     var timeSinceCreatedInterval: String?
     var author: String?
     var storyID:Int?
     var storyTitle: String?
     var storyURL: String?
     var storyText: String?
-    
+    var userDeletedArticle: Bool!
+
     init(hackerData: HackerData) {
-        if let createdTimeStampString = hackerData[jsonKeys.createdAtKey] as? String {
+        self.userDeletedArticle = false
+        if let createdTimeSecondsUnwrap = hackerData[HackerNewsConstants.jsonKeys.createdAtiKey] as? Int {
+            self.createdTimeSeconds = createdTimeSecondsUnwrap
+        }
+        
+        if let createdTimeStampString = hackerData[HackerNewsConstants.jsonKeys.createdAtKey] as? String {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
             dateFormatter.timeZone = NSTimeZone(name: "UTC")
@@ -42,23 +34,23 @@ struct HackerNewsArticle {
             
             if let date = dateFormatter.dateFromString(createdTimeStampString) {
                 self.timeSinceCreatedInterval = NSDate().offsetFrom(date)
-                self.createdTimeStampDate = createdTimeStampString
+                self.createdTimeStampDate = date
             }
         }
-        if let author = hackerData[jsonKeys.author] as? String {
+        if let author = hackerData[HackerNewsConstants.jsonKeys.author] as? String {
             self.author = author
         }
         
-        if let commentText = hackerData[jsonKeys.comment_text] as? String {
+        if let commentText = hackerData[HackerNewsConstants.jsonKeys.comment_text] as? String {
             self.storyText = commentText
-        } else if let storyTextUnwrap = hackerData[jsonKeys.storyText] as? String {
+        } else if let storyTextUnwrap = hackerData[HackerNewsConstants.jsonKeys.storyText] as? String {
             self.storyText = storyTextUnwrap
         }
 
         
-        if let storyID = hackerData[jsonKeys.storyID] as? Int {
+        if let storyID = hackerData[HackerNewsConstants.jsonKeys.storyID] as? Int {
             self.storyID = storyID
-        } else if let tags = hackerData[jsonKeys.tags] as? NSArray {
+        } else if let tags = hackerData[HackerNewsConstants.jsonKeys.tags] as? NSArray {
             let intString = tags[2].componentsSeparatedByCharactersInSet(
                 NSCharacterSet
                     .decimalDigitCharacterSet()
@@ -67,15 +59,15 @@ struct HackerNewsArticle {
             self.storyID = Int(intString)
             print(self.storyID)
         }
-        if let storyTitle = hackerData[jsonKeys.storyTitle] as? String ??  hackerData[jsonKeys.title] as? String {
+        if let storyTitle = hackerData[HackerNewsConstants.jsonKeys.storyTitle] as? String ??  hackerData[HackerNewsConstants.jsonKeys.title] as? String {
             self.storyTitle = storyTitle
         }
-        if let storyURL = hackerData[jsonKeys.storyURL] as? String ?? hackerData[jsonKeys.url] as? String {
+        if let storyURL = hackerData[HackerNewsConstants.jsonKeys.storyURL] as? String ?? hackerData[HackerNewsConstants.jsonKeys.url] as? String {
             self.storyURL = storyURL
-        } else if let tags = hackerData[jsonKeys.highlightResult] as? HackerData,
-            let highlightresults = tags[jsonKeys.highlightResult] as? NSArray{
+        } else if let tags = hackerData[HackerNewsConstants.jsonKeys.highlightResult] as? HackerData,
+            let highlightresults = tags[HackerNewsConstants.jsonKeys.highlightResult] as? NSArray{
                 for highlightresult in highlightresults {
-                    if let highlightresult = highlightresult[jsonKeys.storyURL] {
+                    if let highlightresult = highlightresult[HackerNewsConstants.jsonKeys.storyURL] {
                         print(highlightresult)
                     }
                 }
@@ -90,14 +82,15 @@ struct HackerNewsArticle {
      - returns: no return
      */
     init(withHackerManagedObject hackerArticle: HackerManagedObject) {
-        self.createdTimeStampDate = hackerArticle.createdTimeStampDate ?? "No time stamp"
+        self.createdTimeStampDate = hackerArticle.createdTimeStampDate ?? NSDate()
         self.timeSinceCreatedInterval = hackerArticle.timeSinceCreatedInterval ?? "No time since created"
         self.author = hackerArticle.author ?? "No author"
         self.storyID = Int(hackerArticle.storyID) ?? -1
         self.storyTitle = hackerArticle.storyTitle ?? "No title"
         self.storyURL = hackerArticle.storyURL ?? "No story URL"
         self.storyText = hackerArticle.storyText ?? "No story text"
-
+        self.userDeletedArticle = hackerArticle.userDeletedArticle
+        self.createdTimeSeconds = Int(hackerArticle.createdTimeSeconds) ?? -1
     }
 
 }

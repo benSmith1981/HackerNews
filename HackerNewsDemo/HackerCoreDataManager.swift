@@ -12,15 +12,18 @@ import CoreData
 
 class HackerCoreDataManager {
     static let entityName = "HackerNewsModel"
-    
+
     // MARK: Songs API methods
     
-    //Get all songs stored from coreDataModel
+    //Get all Articles stored from coreDataModel
     class func getAllArticles() throws -> [HackerManagedObject] {
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
         
         // Fetch reqest for entity Person
         let fetchRequest = NSFetchRequest(entityName: entityName)
+        // Adding the predicate
+        let predicate = NSPredicate(format: "userDeletedArticle == false")
+        fetchRequest.predicate = predicate
         
         // Getting the result and return an error or the names as ManagedObjects
         do {
@@ -32,17 +35,39 @@ class HackerCoreDataManager {
         }
     }
     
+    //Get all articles older than two days
+    class func getAll2DayOldArticles() throws -> [HackerManagedObject] {
+        let managedContext = CoreDataManager.sharedInstance.managedObjectContext
+        
+        // Fetch reqest for entity Person
+        let fetchRequest = NSFetchRequest(entityName: entityName)
+        // Adding the predicate
+        // 172800= 2 days in seconds, so articles less than this are two days old, then we purge
+        let predicate = NSPredicate(format: "createdTimeSeconds < %@" , "\(Int64(NSDate().timeIntervalSince1970 - 172800))")
+        fetchRequest.predicate = predicate
+
+        // Getting the result and return an error or the names as ManagedObjects
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            return results as! [HackerManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+            throw error
+        }
+    }
+    
+    
     //Save the new Article and return a managedObject
     class func saveNewArticle(article: HackerNewsArticle?) throws -> HackerManagedObject? {
         
         if let article = article {
             let managedContext = CoreDataManager.sharedInstance.managedObjectContext
             
-            // Get the object to insert for CDSong entitiy and given managedObjectContex
+            //Create a hacker news article managed object
             let hackerNewsArticle: HackerManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedContext) as! HackerManagedObject
-            
+            //Clone article into managed object
             hackerNewsArticle.cloneFromHackerNewsModel(article)
-            // Save the new person
+            // Save
             do {
                 try managedContext.save()
                 return hackerNewsArticle
@@ -56,10 +81,37 @@ class HackerCoreDataManager {
     }
     
     //Delete an article from the core data store
+    class func setArticleToDeleted(article: HackerManagedObject) throws -> Bool {
+        article.userDeletedArticle = true
+        let managedContext = CoreDataManager.sharedInstance.managedObjectContext
+        // delete the article
+        do {
+            try managedContext.save()
+            return true
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+            return false
+        }
+    }
+    
+    //Delete all articles older than two days
+    class func purgeTwoDayOldArticles() {
+        
+        if let articles = try? HackerCoreDataManager.getAll2DayOldArticles() {
+            for article in articles {
+                print(NSDate().hoursFrom(article.createdTimeStampDate))
+                let _ = try? HackerCoreDataManager.deleteArticle(article)
+            }
+        }
+    }
+
+    //Delete an article from the core data store
     class func deleteArticle(article: HackerManagedObject) throws -> Bool {
+        
         CoreDataManager.sharedInstance.managedObjectContext.deleteObject(article)
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
         // delete the article
+
         do {
             try managedContext.save()
             return true

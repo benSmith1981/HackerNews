@@ -84,11 +84,11 @@ extension HackerNewsAPIService {
                         for jsonObject in (json["hits"] as? NSArray)!{
                             print(jsonObject)
                             //creat new object
-                            self.newHackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
+//                            self.newHackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
                             //send object ot coredata for storage
-                            if let hackerData = self.newHackerData {
-                                self.saveArticle(hackerData)
-                            }
+                            let hackerData = HackerNewsArticle.init(hackerData: jsonObject as! HackerData)
+                            self.saveArticle(hackerData)
+                            
                         }
                         //success
                         onCompletion(true, serverMessage, serverCode)
