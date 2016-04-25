@@ -67,7 +67,7 @@ struct HackerNewsConstants{
     }
     
     struct tableCellIDs{
-        static let HackerNewsCell = "HackerNewsCell"
+        static let HackerTableCell = "HackerCell"
     }
     
     struct coreDataEntities {
