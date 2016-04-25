@@ -19,6 +19,11 @@ struct HackerNewsArticle {
     var storyText: String?
     var userDeletedArticle: Bool!
 
+    /**
+     This parses the feed and stores to our struct object
+     
+     - parameter hackerData: HackerData dictionary JSON object from feed to store
+     */
     init(hackerData: HackerData) {
         self.userDeletedArticle = false
         if let createdTimeSecondsUnwrap = hackerData[HackerNewsConstants.jsonKeys.createdAtiKey] as? Int {
@@ -29,7 +34,7 @@ struct HackerNewsArticle {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
             dateFormatter.timeZone = NSTimeZone(name: "UTC")
-            dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: HackerNewsConstants.timeInSeconds.twoHoursInSeconds)
+            dateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: Int(timeInSeconds.twoHoursInSeconds.rawValue))
             print(dateFormatter.dateFromString(createdTimeStampString))
             
             if let date = dateFormatter.dateFromString(createdTimeStampString) {

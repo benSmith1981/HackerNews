@@ -22,6 +22,7 @@
 		BEA334011CCE143C00F5755B /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE951DC31CB5B14100EEB214 /* NSDateExtension.swift */; };
 		BEA334021CCE145400F5755B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA333FD1CCE0B1700F5755B /* UIViewControllerExtensions.swift */; };
 		BEA334031CCE145700F5755B /* DetailHackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2983C21CC435CC001E1957 /* DetailHackerView.swift */; };
+		BEA334041CCEBB9200F5755B /* HackerCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE878C1CCE268500C1E706 /* HackerCoreDataManager.swift */; };
 		BEBF12351CB1AB4B00EA9479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF12341CB1AB4B00EA9479 /* AppDelegate.swift */; };
 		BEBF123A1CB1AB4B00EA9479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBF12381CB1AB4B00EA9479 /* Main.storyboard */; };
 		BEBF123C1CB1AB4B00EA9479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBF123B1CB1AB4B00EA9479 /* Assets.xcassets */; };
@@ -340,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE2983BD1CC28869001E1957 /* Constants.swift in Sources */,
+				BEA334041CCEBB9200F5755B /* HackerCoreDataManager.swift in Sources */,
 				BEA333FC1CCD9EAD00F5755B /* HackerNewsVC.swift in Sources */,
 				BEA334021CCE145400F5755B /* UIViewControllerExtensions.swift in Sources */,
 				BEA333FB1CCD9E9600F5755B /* HackerManagedObject.swift in Sources */,

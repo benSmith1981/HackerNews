@@ -26,7 +26,12 @@ class HackerManagedObject: NSManagedObject {
     @NSManaged var storyText: String
     @NSManaged var userDeletedArticle: Bool
 
-    func cloneFromHackerNewsModel(hackerArticle:HackerNewsArticle) {
+    /**
+     Clone an article saved in the feed object to a managed object for storage
+     
+     - parameter hackerArticle: HackerNewsArticle to clone to managed object
+     */
+    func cloneFromHackerNewsModel(hackerArticle: HackerNewsArticle) {
         
         // Set the needed values from hacker news model object
         self.createdTimeStampDate = hackerArticle.createdTimeStampDate ?? NSDate()

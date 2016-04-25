@@ -24,7 +24,14 @@ class HackerNewsAPIService {
 
     private init() {}
     
-    func isConnectedToNetwork(networkCheckResponse: APIResponse) {
+    /**
+     Checks for a network connection and gives a response so app knows how to behave
+     
+     - parameter networkCheckResponse: APIResponse checks for network give a response
+     
+     - returns: if the APIResponse, telling app if success in connecting to a network and appropriate error message
+     */
+     func isConnectedToNetwork(networkCheckResponse: APIResponse) {
         
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
@@ -48,7 +55,14 @@ class HackerNewsAPIService {
         networkCheckResponse(true, HackerNewsConstants.serverMessages.OK, nil)
     }
     
-    func APIServiceCheck(onCompletion: APIResponse) {
+    /**
+     Helper method to set the server message correctly
+     
+     - parameter networkCheckResponse: APIResponse checks for network give a response
+     
+     - returns: if the APIResponse, telling app if success in connecting to a network and appropriate error message
+     */
+    private func APIServiceCheck(onCompletion: APIResponse) {
         //check for network connection
         isConnectedToNetwork { (success, message, code) in
             guard success else {
@@ -68,6 +82,13 @@ class HackerNewsAPIService {
 //MARK: - load HackerNewsAPIService
 extension HackerNewsAPIService {
     
+    /**
+     Public method called to load the data feed making network requests passing back error messages and success or fail
+     
+     - parameter onCompletion: APIResponse passes back information on success of feed parsing
+     
+     - returns: if the APIResponse, telling app if success in parsing the feed or connecting to a network and appropriate error message
+     */
     func loadFeed(onCompletion: APIResponse) {
         APIServiceCheck { (success, message, code) in
             if success {
@@ -103,7 +124,14 @@ extension HackerNewsAPIService {
 //MARK: CoreData Functions
 extension HackerNewsAPIService {
 
-    func saveArticle(article: HackerNewsArticle) {
+    /**
+     Private method called by feedloader to save article parsed to core data
+     
+     - parameter article: HackerNewsArticle Data feed object to save to coredata
+     
+     - returns: nothing
+     */
+    private func saveArticle(article: HackerNewsArticle) {
         do {
             if !HackerCoreDataManager.checkIfArticleAlreadyIsStored(article.storyID!) {
                 try HackerCoreDataManager.saveNewArticle(article)
@@ -113,21 +141,19 @@ extension HackerNewsAPIService {
             print(error)
         }
     }
-    
-    func getAllArticles() throws -> [HackerManagedObject] {
-        do {
-            let HackerNewsArticles = try HackerCoreDataManager.getAllArticles()
-            return HackerNewsArticles
-        }
-        catch {
-            throw error
-        }
-    }
-    
 }
 
 //MARK: - load Load Request returning json
 extension HackerNewsAPIService {
+    
+    /**
+     Private method called by feedloader to make NSURLSession and download json data
+     
+     - parameter path: String to the feed
+     - parameter onCompletion: APIServiceResponse response object giving success and error messages
+     
+     - returns: nothing
+     */
     private func makeLoadrequest(path: String, onCompletion: APIServiceResponse){
         
         let session = NSURLSession.sharedSession()
