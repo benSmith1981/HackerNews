@@ -122,45 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerNewsDemo/HackerNewsVC.swift"
-            timestampString = "483265408.798463"
+            timestampString = "483269503.221022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "tableView(_:commitEditingStyle:forRowAtIndexPath:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsTableViewController.tableView (__ObjC.UITableView, commitEditingStyle : __C.UITableViewCellEditingStyle, forRowAtIndexPath : __ObjC.NSIndexPath) -&gt; ()"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267735.704047"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "271">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsTableViewController.tableView (__ObjC.UITableView, commitEditingStyle : __C.UITableViewCellEditingStyle, forRowAtIndexPath : __ObjC.NSIndexPath) -&gt; ()"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267737.218183"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "271">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -177,38 +145,6 @@
             endingLineNumber = "71"
             landmarkName = "init(hackerData:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsArticle.init (hackerData : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; HackerNewsDemo.HackerNewsArticle"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsArticle.swift"
-                  timestampString = "483267735.705979"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "11420">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsArticle.init (hackerData : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;) -&gt; HackerNewsDemoTests.HackerNewsArticle"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsArticle.swift"
-                  timestampString = "483267737.238557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "11420">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -225,53 +161,6 @@
             endingLineNumber = "39"
             landmarkName = "testUserRequestReturnsData()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsDemoTests.(testUserRequestReturnsData () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemoTests/HackerNewsDemoTests.swift"
-                  timestampString = "483267737.239224"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsDemoTests.(testUserRequestReturnsData () -&gt; ()).(closure #1).(implicit closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemoTests/HackerNewsDemoTests.swift"
-                  timestampString = "483267737.239927"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "39">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsDemoTests.(testUserRequestReturnsData () -&gt; ()).(closure #1).(implicit closure #2)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemoTests/HackerNewsDemoTests.swift"
-                  timestampString = "483267737.24041"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -288,38 +177,6 @@
             endingLineNumber = "60"
             landmarkName = "loadHackerNews(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsTableViewController.(loadHackerNews (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267735.708585"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "555">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsTableViewController.(loadHackerNews (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267737.246504"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "555">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -336,38 +193,6 @@
             endingLineNumber = "59"
             landmarkName = "loadHackerNews(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsTableViewController.(loadHackerNews (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267735.709841"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsTableViewController.(loadHackerNews (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsVC.swift"
-                  timestampString = "483267737.246956"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -384,38 +209,6 @@
             endingLineNumber = "97"
             landmarkName = "loadFeed(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsAPIService.(loadFeed ((Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsAPIService.swift"
-                  timestampString = "483267735.711079"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "407">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsAPIService.(loadFeed ((Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsAPIService.swift"
-                  timestampString = "483267737.247532"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "407">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -432,38 +225,6 @@
             endingLineNumber = "56"
             landmarkName = "APIServiceCheck(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.HackerNewsAPIService.(APIServiceCheck ((Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsAPIService.swift"
-                  timestampString = "483267735.712078"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "869">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.HackerNewsAPIService.(APIServiceCheck ((Swift.Bool, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/HackerNewsAPIService.swift"
-                  timestampString = "483267737.247942"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "869">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -480,38 +241,6 @@
             endingLineNumber = "38"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267735.71313"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "5075">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267737.248361"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "5075">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -528,38 +257,6 @@
             endingLineNumber = "41"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267735.714242"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "7386">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267737.248664"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "7386">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -576,38 +273,6 @@
             endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemo.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267735.715187"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "1930">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerNewsDemoTests.DetailHackerView.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HackerNewsDemoTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/funkymonkey1981/Documents/HackerNewsDemo/HackerNewsDemo/DetailHackerView.swift"
-                  timestampString = "483267737.248977"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "1930">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

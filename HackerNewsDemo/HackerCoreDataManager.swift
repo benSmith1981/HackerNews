@@ -15,7 +15,7 @@ class HackerCoreDataManager {
 
     // MARK: Songs API methods
     
-    //Get all Articles stored from coreDataModel
+    //Get all Articles that have not been marked as deleted that are stored in our coreDataModel
     class func getAllArticles() throws -> [HackerManagedObject] {
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
         
@@ -80,7 +80,7 @@ class HackerCoreDataManager {
         return nil
     }
     
-    //Delete an article from the core data store
+    //Set an article userDeletedArticle flag to true, does not remove but means won't be displayed
     class func setArticleToDeleted(article: HackerManagedObject) throws -> Bool {
         article.userDeletedArticle = true
         let managedContext = CoreDataManager.sharedInstance.managedObjectContext
@@ -124,7 +124,7 @@ class HackerCoreDataManager {
     /**
      Check if the Article is already saved in local database
      
-     - parameter trackId: trackId for the song witch need to be verified
+     - parameter storyID: storyID for the article to be verified
      
      - returns: if the Article is stored returns true, else - false
      */

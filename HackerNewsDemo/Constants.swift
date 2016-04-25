@@ -61,4 +61,12 @@ struct HackerNewsConstants{
         static let deletedStoryIds = "deletedStoryIds"
     }
     
+    struct segues{
+        static let DetailHackerView = "DetailHackerView"
+    }
+    
+    struct tableCellIDs{
+        static let HackerNewsCell = "HackerNewsCell"
+    }
+    
 }

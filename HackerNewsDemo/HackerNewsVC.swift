@@ -15,6 +15,7 @@ class HackerNewsTableViewController: UITableViewController {
     //MARK: Properties
     var savedArticles = [HackerManagedObject]() {
         didSet {
+            //everytime savedarticles is added to or deleted from table is refreshed
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -43,7 +44,7 @@ class HackerNewsTableViewController: UITableViewController {
     //MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
-        if (segue.identifier == "DetailHackerView") {
+        if (segue.identifier == HackerNewsConstants.segues.DetailHackerView) {
             // initialize new view controller and cast it as your view controller
             let detailView = segue.destinationViewController as! DetailHackerView
             // your new view controller should have property that will store passed value
@@ -53,16 +54,14 @@ class HackerNewsTableViewController: UITableViewController {
 
     
     //MARK Load Hacker news on refresh
-    
-     func loadHackerNews(sender:AnyObject) {
+    func loadHackerNews(sender:AnyObject) {
         HackerNewsAPIService.sharedInstance.loadFeed { (success, message, code) in
             if(success || code == HackerNewsConstants.serverCodes.noConnection){
                 if code == HackerNewsConstants.serverCodes.noConnection {
                     self.displayAlertMessage(HackerNewsConstants.serverMessages.noConnection, alertDescription: "")
                 }
                 self.savedArticles = try! HackerCoreDataManager.getAllArticles()
-                self.tableView.reloadData()
-                self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HackerNewsCell")
+                self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: HackerNewsConstants.tableCellIDs.HackerNewsCell)
             }
             self.refreshControl!.endRefreshing()
 
@@ -113,7 +112,7 @@ extension HackerNewsTableViewController {
         let hackerArticleManagedObject = self.savedArticles[indexPath.row]
         hackerArticleToPass = HackerNewsArticle(withHackerManagedObject: hackerArticleManagedObject)
         
-        performSegueWithIdentifier("DetailHackerView", sender: self)
+        performSegueWithIdentifier(HackerNewsConstants.segues.DetailHackerView, sender: self)
     }
 }
     
