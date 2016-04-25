@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="HackerNewsCell" editingAccessoryType="detailButton" rowHeight="78" id="I4J-C4-oUG" customClass="HackerTableCell" customModule="HackerNewsDemo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="HackerCell" editingAccessoryType="detailButton" rowHeight="78" id="I4J-C4-oUG" customClass="HackerTableCell" customModule="HackerNewsDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I4J-C4-oUG" id="g3k-Gm-Wcb">
